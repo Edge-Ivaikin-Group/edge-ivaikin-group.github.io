@@ -53,7 +53,7 @@ Search & replace across the repo:
 - `YOURDOMAIN` → your real domain (domain only, e.g., edgefocus.ru or edgeecosystem.com)
 - `hello@YOURDOMAIN` → real email
 - `https://t.me/YOUR_BOT` → Telegram bot link
-- `https://cal.com/YOURCAL` → calendar link
+- `https://calendar.app.google/4aFN841D87V6or7q9` → calendar link
 
 ## SEO / language notes
 
@@ -99,7 +99,7 @@ Search & replace:
 - `YOURDOMAIN` (domain only, e.g. edgefocus.ru)
 - `hello@YOURDOMAIN` (real email)
 - `https://t.me/YOUR_BOT` (your Telegram bot link)
-- `https://cal.com/YOURCAL` (your calendar link)
+- `https://calendar.app.google/4aFN841D87V6or7q9` (your calendar link)
 
 ## Deploy (GitHub Pages)
 1) Create a repo and push this folder contents to the repo root.
@@ -113,4 +113,4 @@ Search & replace:
 
 - Email: hello@YOURDOMAIN
 - Telegram bot: https://t.me/YOUR_BOT
-- Calendar: https://cal.com/YOURCAL
+- Calendar: https://calendar.app.google/4aFN841D87V6or7q9
