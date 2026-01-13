@@ -2,15 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://YOURDOMAIN/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://YOURDOMAIN/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://YOURDOMAIN/ru/"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://YOURDOMAIN/zh/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://YOURDOMAIN/ar/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://YOURDOMAIN/"/>
+    <loc>https://edgeivaikin.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://edgeivaikin.com/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://edgeivaikin.com/ru/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://edgeivaikin.com/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://edgeivaikin.com/ar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edgeivaikin.com/"/>
   </url>
-  <url><loc>https://YOURDOMAIN/ru/</loc></url>
-  <url><loc>https://YOURDOMAIN/zh/</loc></url>
-  <url><loc>https://YOURDOMAIN/ar/</loc></url>
-  <url><loc>https://YOURDOMAIN/deck/</loc></url>
+  <url><loc>https://edgeivaikin.com/ru/</loc></url>
+  <url><loc>https://edgeivaikin.com/zh/</loc></url>
+  <url><loc>https://edgeivaikin.com/ar/</loc></url>
+  <url><loc>https://edgeivaikin.com/deck/</loc></url>
 </urlset>

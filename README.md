@@ -1,5 +1,7 @@
 # Edge Ecosystem - Company Website (GitHub Pages)
 
+Fast static site (no framework) with EN/RU/ZH/AR locales.
+
 This repository hosts the public website for **Edge Ecosystem** (high-tech landing + multi-language SEO).
 
 - Live (custom domain): https://YOURDOMAIN/
@@ -15,6 +17,7 @@ This repository hosts the public website for **Edge Ecosystem** (high-tech landi
 - `/EdgeEcosystem_Capabilities_Deck_EN.pdf` - PDF deck (EN)
 - `/sitemap.xml` + `/robots.txt` - SEO basics
 - `/assets/` - CSS/JS and static assets
+- `hreflang` + canonical placeholders embedded in pages
 
 ## Quick start (local)
 
@@ -28,6 +31,13 @@ Open `index.html` in a browser. No build step.
 4) Verify site is reachable:
    - https://edge-ivaikin-group.github.io/
 
+## Optional custom domain setup
+
+If you're starting from a brand-new repo:
+1) Create a repo and push this folder contents to the repo root.
+2) GitHub: **Settings → Pages** → **Deploy from a branch**.
+3) Set your apex domain (no www) and then configure DNS A records to GitHub Pages IPs.
+
 ## Attach custom domain (canonical)
 
 1) GitHub: **Settings → Pages → Custom domain** → set `YOURDOMAIN` (apex, no www)
@@ -40,16 +50,17 @@ Open `index.html` in a browser. No build step.
 ## Replace placeholders
 
 Search & replace across the repo:
-- `YOURDOMAIN` → your real domain (e.g., edgefocus.ru or edgeecosystem.com)
+- `YOURDOMAIN` → your real domain (domain only, e.g., edgefocus.ru or edgeecosystem.com)
 - `hello@YOURDOMAIN` → real email
 - `https://t.me/YOUR_BOT` → Telegram bot link
-- `https://cal.com/YOURCAL` → calendar link
+- `https://calendar.app.google/4aFN841D87V6or7q9` → calendar link
 
 ## SEO / language notes
 
 - Each language has its own URL path.
 - Pages include `hreflang` links + `lang` and `dir` attributes.
 - Update `sitemap.xml` after domain change (replace `YOURDOMAIN`).
+- Add a real OG image at `/assets/og.png`.
 
 ## Strict rules (do not violate)
 
@@ -72,6 +83,34 @@ Put sensitive materials into a separate private “dataroom” location.
 
 ## Contact
 
+# Edge High‑Tech Website Starter (EN/RU/ZH/AR)
+
+This is a fast static site (no framework) with:
+- EN default at `/`
+- RU at `/ru/`
+- ZH at `/zh/`
+- AR (RTL) at `/ar/`
+- hreflang + canonical placeholders
+- HTML deck at `/deck/`
+- PDF deck file (English) in the root
+
+## Replace placeholders
+Search & replace:
+- `YOURDOMAIN` (domain only, e.g. edgefocus.ru)
+- `hello@YOURDOMAIN` (real email)
+- `https://t.me/YOUR_BOT` (your Telegram bot link)
+- `https://calendar.app.google/4aFN841D87V6or7q9` (your calendar link)
+
+## Deploy (GitHub Pages)
+1) Create a repo and push this folder contents to the repo root.
+2) GitHub: Settings -> Pages -> Deploy from branch.
+3) Custom domain: set your apex domain (no www), then set DNS A records to GitHub Pages IPs.
+
+## SEO notes
+- Keep separate URLs per language.
+- Each page includes hreflang and lang/dir attributes.
+- Add real OG image at `/assets/og.png`.
+
 - Email: hello@YOURDOMAIN
 - Telegram bot: https://t.me/YOUR_BOT
-- Calendar: https://cal.com/YOURCAL
+- Calendar: https://calendar.app.google/4aFN841D87V6or7q9
