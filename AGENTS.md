@@ -13,8 +13,8 @@ Owner: Edge-Ivaikin-Group maintainers
 ## 0) Context: what this repo is (and is not)
 
 This repo **is**:
-- Public website (EN/RU/ZH/AR) + HTML deck + PDF deck
-- Trust packaging for partners, banks, investors, and hiring
+- Public website (EN/RU/ZH/AR) + HTML deck
+- Trust packaging for enterprise and public-sector partners, and hiring
 - Static files only (HTML/CSS/JS), designed for GitHub Pages + custom domain
 
 This repo is **not**:
@@ -40,7 +40,7 @@ Non-negotiable: **no secrets, no NDA material, no private numbers that require e
 The site must be:
 - **Factual**: claims should be verifiable or framed as capabilities, not promises.
 - **Audit-safe**: “Before → Shipped → Outcome” with metrics only if real.
-- **Transferable**: wording supports assignable contracts + IP owned by LLC.
+- **Service-first**: wording pitches services, delivery discipline, and competencies — no M&A / "for sale" language on public pages.
 
 Never publish:
 - “Guaranteed results”, “we will 10x”, “best in the world”
@@ -103,7 +103,6 @@ If you add anything that could slow down:
 - `assets/app.js` — minimal JS (smooth scroll + deck keys)
 - `sitemap.xml` — sitemap (replace `YOURDOMAIN`)
 - `robots.txt` — robots + sitemap pointer
-- `EdgeEcosystem_Capabilities_Deck_EN.pdf` — PDF deck (EN)
 
 If you add a new top-level folder: update this section.
 
