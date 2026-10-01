@@ -96,6 +96,7 @@ If you add anything that could slow down:
 
 - `index.html` — EN landing
 - `ru/index.html` — RU landing
+- `ru/automation-ai/index.html` — RU evergreen automation/AI lead page
 - `zh/index.html` — ZH landing
 - `ar/index.html` — AR landing (RTL)
 - `deck/index.html` — HTML capabilities deck
