@@ -1,0 +1,89 @@
+/* Conversion path for the four company homepages only. Shared pages keep styles.css. */
+.landing {
+  --action: #79e6f2;
+  --action-ink: #08151d;
+  min-height: 100%;
+  height: auto;
+  overflow-x: clip;
+}
+.landing .skip-link {
+  position: fixed;
+  inset-block-start: -100px;
+  inset-inline-start: 16px;
+  z-index: 100;
+  padding: 14px 20px;
+  background: var(--fg);
+  color: var(--bg);
+}
+.landing .skip-link:focus { inset-block-start: 8px; }
+.landing a:focus-visible,
+.landing summary:focus-visible {
+  outline: 3px solid var(--action);
+  outline-offset: 5px;
+}
+.landing [id] { scroll-margin-block-start: 140px; }
+.landing .nav { height: auto; min-height: 72px; flex-wrap: wrap; gap: 4px 20px; }
+.landing .navlinks { order: 3; flex: 1 0 100%; justify-content: space-between; gap: 22px; padding-block: 0 8px; }
+.landing .navlinks a { display: inline-flex; align-items: center; min-height: 40px; white-space: nowrap; }
+.landing .navlinks a[href="#contact"] { color: var(--action); font-weight: 650; }
+.landing .lang { gap: 0; padding: 0 3px; }
+.landing .lang a { display: inline-flex; align-items: center; justify-content: center; min-width: 36px; min-height: 44px; }
+.landing .hero { padding-block: 50px 40px; }
+.landing .grid2 { grid-template-columns: minmax(0, 1.35fr) minmax(0, .8fr); gap: 56px; align-items: start; }
+.landing .hero-eyebrow { margin: 0; color: var(--action); font-size: 14px; line-height: 1.5; }
+.landing h1 { font-size: clamp(36px, 4.4vw, 56px); line-height: 1.08; margin-block: 16px 20px; text-wrap: balance; }
+.landing .subtitle { font-size: 18px; line-height: 1.6; max-width: 55ch; margin-block: 0; }
+.landing .btn { min-height: 48px; text-align: center; font-weight: 550; }
+.landing .btn.primary { color: var(--action-ink); background: var(--action); border-color: var(--action); box-shadow: none; font-weight: 700; }
+.landing .btn.primary:hover { background: #a8f0f7; border-color: #a8f0f7; }
+.landing .hero-note, .landing .handoff-note { color: var(--muted); font-size: 13px; line-height: 1.6; max-width: 56ch; margin-block: 14px 0; }
+.landing .first-stage { border-inline-start: 2px solid rgba(121,230,242,.45); padding-inline-start: 26px; padding-block: 4px 12px; }
+.landing .first-stage h2 { margin: 0; font-size: 20px; line-height: 1.35; }
+.landing .first-stage ol { padding-inline-start: 20px; margin-block: 22px; }
+.landing .first-stage li { padding-inline-start: 8px; margin-block-end: 20px; }
+.landing .first-stage li::marker { color: var(--action); font-weight: 650; }
+.landing .first-stage h3 { font-size: 15px; margin: 0 0 6px; }
+.landing .first-stage p { color: var(--muted); font-size: 14px; line-height: 1.6; margin: 0; }
+.landing .text-link { color: var(--action); text-decoration: underline; text-underline-offset: 4px; line-height: 1.6; }
+.landing .mini .situation { font-size: 20px; line-height: 1.35; font-weight: 650; color: var(--fg); margin-block: 0 20px; }
+.landing #capabilities .mini h3 { color: var(--action); font-size: 14px; }
+.landing .scope-note { max-width: 75ch; font-size: 14px; line-height: 1.6; color: var(--muted); margin-block: 20px; }
+.landing .faq details { border-block-end: 1px solid var(--stroke); max-width: 850px; }
+.landing .faq summary { cursor: pointer; font-weight: 600; padding-block: 20px; line-height: 1.5; }
+.landing .faq details p { color: var(--muted); line-height: 1.7; max-width: 75ch; margin-block: 0 22px; }
+.landing #contact { background: rgba(121,230,242,.04); border-block: 1px solid rgba(121,230,242,.16); }
+.landing #contact h2 { max-width: 28ch; font-size: clamp(28px, 3vw, 36px); text-wrap: balance; }
+.landing .brief-prompts { padding-inline-start: 22px; margin-block: 22px; line-height: 1.8; }
+.landing .brief-prompts li { padding-inline-start: 6px; }
+.landing .brief-prompts li::marker { color: var(--action); }
+.landing .contact-alternative { font-size: 14px; color: var(--muted); margin-block: 28px 0; }
+.landing .contact-secondary { margin-block-start: 10px; }
+.landing .contact-secondary .btn { background: transparent; box-shadow: none; font-size: 14px; }
+@media (max-width: 980px) {
+  .landing .grid2 { grid-template-columns: minmax(0, 1fr); gap: 34px; }
+  .landing .hero-copy { max-width: 680px; }
+  .landing .navlinks { display: flex; overflow-x: auto; flex-basis: 100%; justify-content: flex-start; gap: 24px; padding-block: 0 4px; scrollbar-width: thin; }
+  .landing .navlinks a { min-height: 44px; }
+  .landing .navlinks a[href="#contact"] { order: -2; }
+  .landing .navlinks a[href="#pricing"] { order: -1; }
+  .landing .first-stage { max-width: 680px; }
+  .landing .hero { padding-block-start: 32px; }
+  .landing .section { padding-block: 36px; }
+}
+@media (max-width: 540px) {
+  .landing .hero { padding-block-start: 24px; }
+  .landing .hero-eyebrow { font-size: 13px; }
+  .landing .subtitle { font-size: 16px; line-height: 1.55; }
+  .landing .hero .cta { gap: 10px; margin-block-start: 20px; }
+  .landing .hero .btn { flex: 1 1 auto; font-size: 14px; padding-inline: 12px; }
+  .landing .hero-note { font-size: 12px; }
+  .landing .first-stage { padding-inline-start: 20px; }
+  .landing .contact-primary .btn { width: 100%; }
+  .landing .contact-secondary { gap: 10px; }
+  .landing .contact-secondary .btn { max-width: 100%; overflow-wrap: anywhere; }
+  .landing .section h2 { font-size: 26px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .landing .btn { transition: none; }
+  .landing .btn:hover { transform: none; }
+}
