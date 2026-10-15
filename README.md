@@ -10,6 +10,7 @@ This repository hosts the public website for **Edge Ecosystem** (high-tech landi
 - `/` - English (default)
 - `/ru/` - Russian
 - `/ru/automation-ai/` - permanent Russian automation/AI page with contact handoff and short PDF
+- `/ru/insights/team-rhythm/` - practical article and copyable team-agreement template, linked to the diagnostic service
 - `/zh/` - Chinese (Simplified)
 - `/ar/` - Arabic (RTL)
 - `/deck/` - HTML capabilities deck (keyboard: ← →)
@@ -18,6 +19,8 @@ This repository hosts the public website for **Edge Ecosystem** (high-tech landi
 - `/assets/` - CSS/JS and static assets
 
 ## Quick start (local)
+
+The team-rhythm article reuses Timothy Ivaikin's [authored short published on 30 September 2026](https://www.youtube.com/shorts/nGt7rlPl9hM), the existing automation page's visual style, portrait and service description. Its questions, fictional CRM handoff example and agreement template are new editorial material, clearly separated from the quoted video. The article adds no client-performance or corporate-history claims and supersedes no existing page. No new analytics or third-party requests on load are introduced.
 
 Open `index.html` in a browser. No build step.
 
