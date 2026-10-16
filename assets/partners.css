@@ -1,0 +1,52 @@
+.partners{background:#05060a;color:#e8ecf4;line-height:1.65;overflow-x:visible}
+.partners .container{max-width:1160px;padding-inline:28px}
+.partner-nav{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:78px;flex-wrap:wrap;padding-block:16px}
+.partner-nav nav,.partner-languages{display:flex;gap:24px;flex-wrap:wrap;font-size:14px}
+.partner-languages [aria-current]{color:#00e5ff}
+.partner-skip{position:fixed;top:-100px;left:12px;z-index:100;background:#e8ecf4;color:#05060a;padding:12px}
+.partner-skip:focus{top:12px}
+.partner-hero{padding-block:88px 92px;border-bottom:1px solid #29303c}
+.partner-kicker{color:#a9b1c6;font-size:16px;margin:0 0 22px}
+.partners h1{font-size:clamp(40px,6.5vw,76px);line-height:1.08;letter-spacing:-.045em;max-width:1000px;margin:0 0 28px;font-weight:650}
+.partner-intro{font-size:clamp(18px,2vw,22px);max-width:790px;color:#bcc4d6}
+.partner-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.partners .btn{font-family:inherit;font-size:15px;white-space:normal;text-align:center;min-height:48px;cursor:pointer}
+.partner-section{padding-block:64px;scroll-margin-top:110px}
+.partners h2{font-size:clamp(28px,3.7vw,42px);line-height:1.2;letter-spacing:-.025em;margin:0 0 28px}
+.partners h3{font-size:21px;line-height:1.35;margin:0 0 14px}
+.partners p{max-width:75ch}
+.partner-tracks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
+.partner-track{padding-top:24px;border-top:3px solid #00e5ff;min-width:0}
+.partner-track p{color:#bcc4d6}
+.text-link,.partners details a{color:#6feaff;text-decoration:underline;text-underline-offset:4px}
+.partner-model,.partner-apply{display:grid;grid-template-columns:1fr 1.2fr;gap:68px}
+.partner-model h3{margin-top:32px}
+.partner-steps{margin:0;padding-left:24px}
+.partner-steps li{padding-left:14px;margin-bottom:28px}
+.partner-steps h3{margin-top:0}
+.partner-faq details,.partners #partner-privacy{border-top:1px solid #29303c;padding:18px 0}
+.partners summary{cursor:pointer;font-weight:600}
+.partner-apply{padding-top:36px;border-top:1px solid #29303c}
+.partner-apply>div p{color:#bcc4d6}
+.partners fieldset{border:0;margin:0 0 22px;padding:0;min-width:0}
+.partner-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.partner-fields label{display:flex;flex-direction:column;gap:7px;font-size:14px;min-width:0}
+.partner-fields .wide{grid-column:1/-1}
+.partners input,.partners select,.partners textarea{width:100%;min-width:0;border:1px solid #566079;border-radius:6px;background:#101521;color:#e8ecf4;padding:12px;font:inherit;box-sizing:border-box}
+.partners select{height:49px}
+.partners textarea{resize:vertical}
+.partners input:focus,.partners select:focus,.partners textarea:focus{outline:2px solid #00e5ff;outline-offset:3px}
+.partners :focus-visible{outline:2px solid #00e5ff;outline-offset:4px}
+.partner-fields label>span{color:#a9b1c6;font-size:13px}
+.partner-consent{display:flex;align-items:flex-start;gap:12px;margin-top:22px;font-size:14px}
+.partner-consent input{width:20px;height:20px;flex:0 0 20px;margin-top:3px;accent-color:#00e5ff}
+.partner-consent a{text-decoration:underline}
+.partner-honeypot{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+.partners button:disabled{opacity:.55;cursor:default}
+.partners #partner-status{overflow-wrap:anywhere;font-size:15px;min-height:26px}
+.partners #partner-privacy{font-size:13px;color:#bcc4d6}
+.partner-footer{padding-block:32px 48px;border-top:1px solid #29303c;font-size:13px;color:#a9b1c6}
+.partner-footer a{text-decoration:underline}
+.visually-hidden{position:absolute;clip-path:inset(50%);width:1px;height:1px;overflow:hidden}
+@media(max-width:800px){.partner-tracks{grid-template-columns:1fr}.partner-model,.partner-apply{grid-template-columns:1fr;gap:28px}.partner-hero{padding-block:54px}.partner-section{padding-block:40px}.partner-nav nav{order:3;width:100%;gap:18px}.partner-nav{gap:12px}.partners .container{padding-inline:20px}}
+@media(max-width:400px){.partner-fields{grid-template-columns:1fr}.partner-nav nav{font-size:13px}.partners h1{font-size:38px}.partner-actions .btn{width:100%}}

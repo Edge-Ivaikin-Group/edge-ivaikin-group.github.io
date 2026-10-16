@@ -96,6 +96,8 @@ If you add anything that could slow down:
 
 - `index.html` — EN landing
 - `ru/index.html` — RU landing
+- `partners/index.html`, `ru/partners/index.html` — EN/RU partner invitation and application form
+- `assets/partners.js`, `assets/partners.css` — bounded partner intake and page styles
 - `ru/automation-ai/index.html` — RU evergreen automation/AI lead page
 - `ru/insights/team-rhythm/index.html` — RU practical article based on the founder's authored video
 - `zh/index.html` — ZH landing

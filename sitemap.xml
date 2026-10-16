@@ -16,4 +16,14 @@
   <url><loc>https://edgeivaikin.com/ar/</loc></url>
   <url><loc>https://edgeivaikin.com/deck/</loc></url>
   <url><loc>https://edgeivaikin.com/company/</loc></url>
+  <url><loc>https://edgeivaikin.com/partners/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://edgeivaikin.com/partners/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://edgeivaikin.com/ru/partners/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edgeivaikin.com/partners/"/>
+  </url>
+  <url><loc>https://edgeivaikin.com/ru/partners/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://edgeivaikin.com/partners/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://edgeivaikin.com/ru/partners/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edgeivaikin.com/partners/"/>
+  </url>
 </urlset>

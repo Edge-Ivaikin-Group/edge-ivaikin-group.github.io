@@ -107,3 +107,11 @@ Search & replace:
 - Email: hello@YOURDOMAIN
 - Telegram bot: https://t.me/YOUR_BOT
 - Calendar: https://calendar.app.google/4aFN841D87V6or7q9
+
+## Partner programme pages
+
+`/partners/` and `/ru/partners/` invite referral, delivery and technology collaboration. They reuse current service descriptions and adapt the existing Strategic System Integrators concept: preserve the partner’s customer relationship, agree roles and work packages, and scope a paid Discovery / Architecture Sprint before delivery where needed. New material is the three-track presentation and application flow. They introduce no current alliance, fixed commission, guaranteed lead or ownership claim, and supersede no existing page or agreement.
+
+The form posts to the dedicated public partner-application API on edgefocus.ru. A validated server receipt confirms storage only, not programme acceptance or a response deadline. Email and Telegram remain visible fallbacks. No tracker or session replay is loaded on these pages. Session storage contains only the retry UUID and opening time; an ambiguous response retries the frozen payload on the current page. Reloads preserve the key but not personal fields.
+
+For a trusted staging build, inject `data-endpoint` on `#partner-form` with the explicit staging API URL. Query parameters never select an endpoint. `?qa=1` is carried through partner navigation but does not fake or suppress a submission. Use synthetic details only when testing against a real server. Run `node --test tests/*.test.mjs`. Live persistence and admin-inbox readiness must be verified before publication; local tests alone do not establish delivery.
