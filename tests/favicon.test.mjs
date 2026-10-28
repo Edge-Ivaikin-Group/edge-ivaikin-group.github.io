@@ -53,12 +53,18 @@ test('every HTML page references the on-canon favicon set and the files exist', 
   assert.deepEqual(pngSize(await readFile(path.join(root, 'assets/favicon-16.png'))), [16, 16]);
   assert.deepEqual(pngSize(await readFile(path.join(root, 'assets/favicon-32.png'))), [32, 32]);
   assert.deepEqual(pngSize(await readFile(path.join(root, 'assets/apple-touch-icon.png'))), [180, 180]);
-  for (const asset of ['assets/favicon.svg', 'assets/favicon-16.png', 'assets/favicon-32.png', 'assets/apple-touch-icon.png']) {
+  for (const asset of ['assets/favicon.svg', 'assets/favicon-16.png', 'assets/favicon-32.png', 'assets/apple-touch-icon.png', 'favicon.ico']) {
     assert.ok((await stat(path.join(root, asset))).size > 0, asset);
   }
-  const headerMark = await readFile(path.join(root, 'assets/logo.svg'), 'utf8');
-  assert.match(headerMark, /#00e5ff/i);
+  const ico = await readFile(path.join(root, 'favicon.ico'));
+  assert.equal(ico.readUInt16LE(0), 0);
+  assert.equal(ico.readUInt16LE(2), 1);
+  assert.equal(ico.readUInt16LE(4), 2);
+  for (const pngName of ['assets/favicon-16.png', 'assets/favicon-32.png']) {
+    const png = await readFile(path.join(root, pngName));
+    assert.ok(ico.includes(png), `${pngName} is embedded in /favicon.ico`);
+  }
   for (const page of ['ru/automation-ai/index.html', 'ru/insights/team-rhythm/index.html']) {
-    assert.match(await readFile(path.join(root, page), 'utf8'), /src="\/assets\/logo\.svg"/);
+    assert.match(await readFile(path.join(root, page), 'utf8'), /src="\/assets\/brand\/edge-logo-navy-header\.svg"/);
   }
 });

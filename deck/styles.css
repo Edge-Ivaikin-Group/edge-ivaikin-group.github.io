@@ -68,11 +68,8 @@ header{
   font-family:var(--mono);
   letter-spacing:.18em;
 }
-.logo{
-  width:34px; height:34px; border-radius:10px;
-  background: radial-gradient(circle at 35% 35%, rgba(0,229,255,.9), rgba(168,85,247,.85));
-  box-shadow: 0 0 24px rgba(0,229,255,.25), 0 0 32px rgba(168,85,247,.18);
-}
+/* Approved Edge master (gold on dark), vector exported from edge-focus docs/brand-assets/edge/Edge-logo-source.ai in solid #E2BF76, tight viewBox. 28px tall = 135px wide, above the 120px minimum. */
+.brand-logo{display:block; width:auto; height:28px}
 .navlinks{
   display:flex; align-items:center; gap:18px;
 }
@@ -205,6 +202,19 @@ h1{
   h1{font-size:40px}
   .split{grid-template-columns:1fr}
   .navlinks{display:none}
+}
+/* The wordmark is 135px wide. Below this width the deck hint shares the row and overflows. */
+@media (max-width: 640px){
+  header .nav{
+    height:auto;
+    min-height:72px;
+    flex-wrap:wrap;
+    align-items:center;
+    column-gap:12px;
+    row-gap:8px;
+    padding-block:12px;
+  }
+  header .pill{order:3; flex-basis:100%}
 }
 
 html[dir="rtl"] body{font-family: var(--sans)}
