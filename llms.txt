@@ -1,0 +1,26 @@
+# Edge Ecosystem
+
+> Public website of ООО «ЭДЖ ЭКОСИСТЕМА» (Edge Ecosystem LLC). The company builds CRM, internal portals, integrations and automation, and coordinates software delivery. EdgeFocus, written as one word, is its project and task system.
+
+Partnership terms are agreed individually. The partner pages state that no standard commission is offered. The Edge name and logo may be used only with prior written permission from the company. Clients pay the company, using the official details on the company page, not a partner.
+
+## Pages
+
+- [Home (EN)](https://edgeivaikin.com/): services, engagement, anonymized examples, published price anchors and contact
+- [Home (RU)](https://edgeivaikin.com/ru/)
+- [Home (ZH)](https://edgeivaikin.com/zh/)
+- [Home (AR)](https://edgeivaikin.com/ar/)
+- [Company details](https://edgeivaikin.com/company/): legal name, INN 9707054215, OGRN 1257700561590, KPP 770701001, address, phone +7 995 657-37-30, email hello@edgeivaikin.com, services and ruble price anchors
+- [Partners (EN)](https://edgeivaikin.com/partners/): referral, delivery and technology collaboration
+- [Partners (RU)](https://edgeivaikin.com/ru/partners/)
+- [Brand guide for partners (EN)](https://edgeivaikin.com/partners/brand/)
+- [Brand guide for partners (RU)](https://edgeivaikin.com/ru/partners/brand/)
+- [Capabilities deck](https://edgeivaikin.com/deck/)
+- [Automation and AI (RU)](https://edgeivaikin.com/ru/automation-ai/)
+- [Team rhythm (RU)](https://edgeivaikin.com/ru/insights/team-rhythm/)
+
+## Contact
+
+- Email: hello@edgeivaikin.com
+- Telegram: https://t.me/TimothyIvaikin
+- Phone: +7 995 657-37-30

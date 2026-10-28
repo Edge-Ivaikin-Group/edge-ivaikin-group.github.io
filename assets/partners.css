@@ -50,3 +50,18 @@
 .visually-hidden{position:absolute;clip-path:inset(50%);width:1px;height:1px;overflow:hidden}
 @media(max-width:800px){.partner-tracks{grid-template-columns:1fr}.partner-model,.partner-apply{grid-template-columns:1fr;gap:28px}.partner-hero{padding-block:54px}.partner-section{padding-block:40px}.partner-nav nav{order:3;width:100%;gap:18px}.partner-nav{gap:12px}.partners .container{padding-inline:20px}}
 @media(max-width:400px){.partner-fields{grid-template-columns:1fr}.partner-nav nav{font-size:13px}.partners h1{font-size:38px}.partner-actions .btn{width:100%}}
+/* Brand guide only. The partner pages have no light/dark logo plate or color swatch. */
+.partners .brand-plate{overflow:hidden;border-radius:12px;margin:0 0 16px}
+.partners .brand-plate img{display:block;width:100%;height:auto;margin-block:-14.6%}
+.partners .brand-plate-light{background:#fff}
+.partners .brand-plate-dark{background:#03080f}
+.partners .brand-swatches{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
+.partners .brand-swatch{border-radius:12px;padding:14px 16px;min-height:92px}
+.partners .brand-swatch h3{font-size:16px;margin:0 0 6px}
+.partners .brand-swatch p{margin:0;max-width:none;font-family:var(--mono);font-size:13px;color:inherit}
+.partners .brand-duo{display:grid;grid-template-columns:1fr 1fr;min-width:0;border-radius:12px;overflow:hidden}
+.partners .brand-duo .brand-swatch{border-radius:0}
+.partners .brand-type-display{font-family:Geist,var(--sans)}
+.partners .brand-type-body{font-family:Manrope,var(--sans)}
+.partners .brand-type-mono{font-family:"Geist Mono",var(--mono)}
+@media(max-width:400px){.partners .brand-duo{grid-template-columns:1fr}}
