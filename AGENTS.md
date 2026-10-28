@@ -97,7 +97,10 @@ If you add anything that could slow down:
 - `index.html` — EN landing
 - `ru/index.html` — RU landing
 - `partners/index.html`, `ru/partners/index.html` — EN/RU partner invitation and application form
+- `partners/brand/index.html`, `ru/partners/brand/index.html` — EN/RU partner brand guide
 - `assets/partners.js`, `assets/partners.css` — bounded partner intake and page styles
+- `assets/brand/` — approved Edge logo files used by the brand guide
+- `llms.txt` — public summary of the company and key pages
 - `ru/automation-ai/index.html` — RU evergreen automation/AI lead page
 - `ru/insights/team-rhythm/index.html` — RU practical article based on the founder's authored video
 - `zh/index.html` — ZH landing

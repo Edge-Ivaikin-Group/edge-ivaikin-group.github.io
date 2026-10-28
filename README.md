@@ -13,6 +13,9 @@ This repository hosts the public website for **Edge Ecosystem** (high-tech landi
 - `/ru/insights/team-rhythm/` - practical article and copyable team-agreement template, linked to the diagnostic service
 - `/zh/` - Chinese (Simplified)
 - `/ar/` - Arabic (RTL)
+- `/partners/` and `/ru/partners/` - partner invitation and application
+- `/partners/brand/` and `/ru/partners/brand/` - partner brand guide
+- `/llms.txt` - public summary of the company and key pages
 - `/deck/` - HTML capabilities deck (keyboard: ← →)
 - `/EdgeEcosystem_Capabilities_Deck_EN.pdf` - PDF deck (EN)
 - `/sitemap.xml` + `/robots.txt` - SEO basics
