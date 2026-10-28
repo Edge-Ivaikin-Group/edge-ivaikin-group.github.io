@@ -203,6 +203,19 @@ h1{
   .split{grid-template-columns:1fr}
   .navlinks{display:none}
 }
+/* The wordmark is 135px wide. Below this width the deck hint shares the row and overflows. */
+@media (max-width: 640px){
+  header .nav{
+    height:auto;
+    min-height:72px;
+    flex-wrap:wrap;
+    align-items:center;
+    column-gap:12px;
+    row-gap:8px;
+    padding-block:12px;
+  }
+  header .pill{order:3; flex-basis:100%}
+}
 
 html[dir="rtl"] body{font-family: var(--sans)}
 html[dir="rtl"] .brand{letter-spacing:.08em}

@@ -70,6 +70,9 @@
   .landing .hero { padding-block-start: 32px; }
   .landing .section { padding-block: 36px; }
 }
+@media (max-width: 340px) {
+  .landing .nav { padding-block: 10px 2px; }
+}
 @media (max-width: 540px) {
   .landing .hero { padding-block-start: 24px; }
   .landing .hero-eyebrow { font-size: 13px; }
