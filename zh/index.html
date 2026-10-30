@@ -6,7 +6,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
   <title>Edge Ecosystem — 主权级数字基础设施与 B2B 自动化</title>
   <meta name="description" content="当数据分散、团队依赖手工搬运数据，或交付卡在多个供应商之间时，我们提供 CRM、内部门户和系统集成服务。"/>
   <meta name="theme-color" content="#05060a"/>
@@ -220,15 +220,15 @@
       <ol class="brief-prompts"><li>什么问题正在拖慢团队？</li><li>涉及哪些系统和人员？</li><li>期望什么结果，何时需要？</li></ol>
       <p><a href="/partners/" style="color:var(--accent);text-decoration:underline">合作伙伴（英文）</a> — 推荐业务机会、参与项目交付，或提出技术合作。</p>
       <div class="cta contact-primary">
-        <a class="btn primary" href="mailto:hello@edgeivaikin.com?subject=%E9%A1%B9%E7%9B%AE%E5%92%A8%E8%AF%A2%20%E2%80%94%20Edge&amp;body=Edge%EF%BC%8C%E6%82%A8%E5%A5%BD%EF%BC%81%0A%0A%E5%B8%8C%E6%9C%9B%E6%94%B9%E5%8F%98%E7%9A%84%E9%97%AE%E9%A2%98%EF%BC%9A%0A%0A%E5%BD%93%E5%89%8D%E7%B3%BB%E7%BB%9F%E5%92%8C%E5%9B%A2%E9%98%9F%EF%BC%9A%0A%0A%E6%9C%9F%E6%9C%9B%E7%BB%93%E6%9E%9C%E5%92%8C%E6%97%B6%E9%97%B4%EF%BC%9A%0A%0A%E5%A7%93%E5%90%8D%E5%92%8C%E5%85%AC%E5%8F%B8%EF%BC%9A%0A">通过邮件描述项目</a>
-        <a class="btn" href="https://t.me/TimothyIvaikin" target="_blank" rel="noopener">通过 Telegram 联系</a>
+        <a class="btn primary" data-goal="contact_telegram" href="https://t.me/TimothyIvaikin" target="_blank" rel="noopener">在 Telegram 上给我们留言</a>
+        <a class="btn" data-goal="contact_email" href="mailto:hello@edgeivaikin.com?subject=%E9%A1%B9%E7%9B%AE%E5%92%A8%E8%AF%A2%20%E2%80%94%20Edge&amp;body=Edge%EF%BC%8C%E6%82%A8%E5%A5%BD%EF%BC%81%0A%0A%E5%B8%8C%E6%9C%9B%E6%94%B9%E5%8F%98%E7%9A%84%E9%97%AE%E9%A2%98%EF%BC%9A%0A%0A%E5%BD%93%E5%89%8D%E7%B3%BB%E7%BB%9F%E5%92%8C%E5%9B%A2%E9%98%9F%EF%BC%9A%0A%0A%E6%9C%9F%E6%9C%9B%E7%BB%93%E6%9E%9C%E5%92%8C%E6%97%B6%E9%97%B4%EF%BC%9A%0A%0A%E5%A7%93%E5%90%8D%E5%92%8C%E5%85%AC%E5%8F%B8%EF%BC%9A%0A">用邮件发送简短说明</a>
       </div>
-      <p class="handoff-note">将在您的邮件应用中打开草稿。请检查内容后自行发送。</p>
+      <p class="handoff-note">将打开 Telegram 聊天。直接发送上面的三点即可。</p>
       <p class="contact-alternative">更希望直接沟通？</p>
       <div class="cta contact-secondary">
-        <a class="btn" href="https://calendar.app.google/4aFN841D87V6or7q9" target="_blank" rel="noopener">选择沟通时间</a>
-        <a class="btn" href="https://t.me/EdgeExecuteBot" target="_blank" rel="noopener">Telegram 机器人</a>
-        <a class="btn" href="mailto:hello@edgeivaikin.com">hello@edgeivaikin.com</a>
+        <a class="btn" data-goal="contact_calendar" href="https://calendar.app.google/4aFN841D87V6or7q9" target="_blank" rel="noopener">选择沟通时间</a>
+        <a class="btn" data-goal="contact_bot" href="https://t.me/EdgeExecuteBot" target="_blank" rel="noopener">Telegram 机器人</a>
+        <a class="btn" data-goal="contact_email" href="mailto:hello@edgeivaikin.com">hello@edgeivaikin.com</a>
       </div>
       <p style="margin-top:12px; color:var(--muted); font-size:13px">企业与公共部门伙伴：详细案例参考可在 NDA 下提供。</p>
     </div>
@@ -244,7 +244,7 @@
         <div style="margin-top:12px; font-size:12.5px; color:var(--muted); max-width:600px; line-height:1.55">
           OOO “EDGE ECOSYSTEM” (LLC) · INN 9707054215 · OGRN 1257700561590 · KPP 770701001<br>
           Registered address: 127055, Moscow, 1st Tikhvinsky tupik, 5‑7, office 1P, Russia<br>
-          Phone: <a href="tel:+79956573730">+7 995 657‑37‑30</a> · Email: <a href="mailto:hello@edgeivaikin.com">hello@edgeivaikin.com</a><br>
+          Phone: <a data-goal="contact_phone" href="tel:+79956573730">+7 995 657‑37‑30</a> · Email: <a data-goal="contact_email" href="mailto:hello@edgeivaikin.com">hello@edgeivaikin.com</a><br>
           IT activities (per the list approved by Mintsifry Order No. 449 of 11.05.2023): 1.01, 1.04, 2.01. Primary OKVED 62.01.
         </div>
         <div style="margin-top:10px">© 2026 Edge Ecosystem. 保留所有权利。</div>
@@ -257,6 +257,10 @@
   </div>
 </footer>
 
+<nav class="sticky-cta" aria-label="联系" hidden="hidden">
+  <a class="btn primary" data-goal="sticky_telegram" href="https://t.me/TimothyIvaikin" target="_blank" rel="noopener">Telegram</a>
+  <a class="btn" data-goal="sticky_cta" href="#contact">讨论您的项目</a>
+</nav>
 <script src="/assets/app.js" defer></script>
 </body>
 </html>

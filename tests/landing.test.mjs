@@ -51,25 +51,77 @@ for (const locale of locales) {
     section(html, 'proof');
   });
 
-  test(`${locale.lang}: contact opens a populated email draft and retains existing channels`, () => {
+  test(`${locale.lang}: contact leads with Telegram and keeps a populated email brief`, () => {
     const contact = section(html, 'contact');
     const links = elements(contact, 'a');
-    const draft = links.find(({ attrs }) => attrs.href?.startsWith('mailto:') && attrs.class?.split(/\s+/).includes('primary'));
-    assert.ok(draft, 'primary contact action is an email draft');
+    const primary = links.filter(({ attrs }) => attrs.class?.split(/\s+/).includes('primary'));
+    assert.equal(primary.length, 1, 'one primary contact action');
+    assert.equal(primary[0].attrs.href, 'https://t.me/TimothyIvaikin');
+    assert.equal(primary[0].attrs['data-goal'], 'contact_telegram');
+    assert.equal(plain(primary[0].body), {
+      en: 'Message us on Telegram',
+      ru: 'Написать в Telegram',
+      zh: '在 Telegram 上给我们留言',
+      ar: 'راسلونا على تيليجرام',
+    }[locale.lang]);
+    const draft = links.find(({ attrs }) => attrs.href?.startsWith('mailto:hello@edgeivaikin.com?') && attrs.href.includes('body='));
+    assert.ok(draft, 'email brief remains available');
+    assert.equal(draft.attrs.class?.split(/\s+/).includes('primary'), false);
+    assert.equal(draft.attrs['data-goal'], 'contact_email');
+    assert.equal(plain(draft.body), {
+      en: 'Email a short brief',
+      ru: 'Описать задачу по почте',
+      zh: '用邮件发送简短说明',
+      ar: 'أرسل موجزاً قصيراً بالبريد',
+    }[locale.lang]);
     const url = new URL(draft.attrs.href);
     assert.equal(url.pathname, 'hello@edgeivaikin.com');
     assert.ok(url.searchParams.get('subject')?.trim(), 'draft includes a subject');
     assert.ok((url.searchParams.get('body')?.trim().split(/\r?\n/).filter(Boolean).length ?? 0) >= 3,
       'draft includes a useful multi-line brief');
+    const note = elements(contact, 'p').find(({ attrs }) => attrs.class?.split(/\s+/).includes('handoff-note'));
+    assert.equal(plain(note.body), {
+      en: 'Opens a Telegram chat. Just send the 3 points above.',
+      ru: 'Откроется чат в Telegram. Можно сразу написать 3 пункта выше.',
+      zh: '将打开 Telegram 聊天。直接发送上面的三点即可。',
+      ar: 'تُفتح محادثة في تيليجرام. أرسل النقاط الثلاث أعلاه.',
+    }[locale.lang]);
+    assert.doesNotMatch(plain(note.body), /минут|minute|小时|ساعة|reply within|ответим|回复/i);
     const hrefs = new Set(links.map(({ attrs }) => attrs.href));
     for (const href of [calendar, 'https://t.me/TimothyIvaikin', 'https://t.me/EdgeExecuteBot', 'mailto:hello@edgeivaikin.com']) {
       assert.ok(hrefs.has(href), `existing contact channel retained: ${href}`);
     }
+    assert.equal(links.find(({ attrs }) => attrs.href === calendar)?.attrs['data-goal'], 'contact_calendar');
     assert.doesNotMatch(contact, /<form\b/i, 'contact does not imply an unimplemented form submission');
     for (const link of elements(html, 'a').filter(({ attrs }) => attrs.href === calendar)) {
       assert.doesNotMatch(plain(link.body), /(?:20|٢٠)\s*[‑–\-]?\s*(?:min|мин|分钟|دقيقة)/i,
         'calendar link must not promise an unverified 20-minute appointment');
     }
+    for (const link of elements(html, 'a')) {
+      const href = link.attrs.href ?? '';
+      if (href.startsWith('tel:')) assert.equal(link.attrs['data-goal'], 'contact_phone');
+      if (href.startsWith('mailto:')) assert.equal(link.attrs['data-goal'], 'contact_email');
+    }
+  });
+
+  test(`${locale.lang}: mobile contact bar is present and hidden until script shows it`, () => {
+    const bars = elements(html, 'nav').filter(({ attrs }) => attrs.class?.split(/\s+/).includes('sticky-cta'));
+    assert.equal(bars.length, 1);
+    assert.equal(bars[0].attrs.hidden, 'hidden');
+    const actions = elements(bars[0].body, 'a');
+    assert.equal(actions[0].attrs.href, 'https://t.me/TimothyIvaikin');
+    assert.equal(actions[0].attrs['data-goal'], 'sticky_telegram');
+    assert.equal(plain(actions[0].body), 'Telegram');
+    assert.equal(actions[1].attrs.href, '#contact');
+    assert.equal(actions[1].attrs['data-goal'], 'sticky_cta');
+    assert.equal(plain(actions[1].body), {
+      en: 'Discuss your project',
+      ru: 'Обсудить задачу',
+      zh: '讨论您的项目',
+      ar: 'ناقش مشروعك',
+    }[locale.lang]);
+    const hero = elements(html, 'section').find(({ attrs }) => attrs.class?.split(/\s+/).includes('hero'));
+    assert.equal(elements(hero.body, 'a').find(({ attrs }) => attrs.class?.split(/\s+/).includes('primary'))?.attrs.href, '#contact');
   });
 
   test(`${locale.lang}: FAQ is readable and operable with native HTML controls`, () => {

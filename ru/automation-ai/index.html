@@ -67,13 +67,22 @@
     ]
   }
   </script>
+<!-- Yandex.Metrika counter (deferred). Webvisor stays off: this page has a lead form. -->
+<script>window.ym=window.ym||function(){(window.ym.a=window.ym.a||[]).push(arguments)};
+function _loadYM(){(function(m,e,t,r,i,k,a){
+m[i].l=1*new Date();
+for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return}}
+k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+})(window,document,'script','https://mc.yandex.ru/metrika/tag.js','ym');
+ym(108284737,'init',{ssr:true,webvisor:false,clickmap:false,accurateTrackBounce:true,trackLinks:true});}
+if('requestIdleCallback' in window){requestIdleCallback(_loadYM)}else{addEventListener('load',_loadYM)}</script>
 </head>
 <body>
   <header class="site-header">
     <a class="edge-mark" href="/ru/" aria-label="На главную Edge">
       <img src="/assets/brand/edge-logo-navy-header.svg" alt="" width="135" height="28">
     </a>
-    <a class="header-contact" href="https://t.me/TIMOTHYIVAIKIN" target="_blank" rel="noopener">Написать Тимофею</a>
+    <a data-goal="contact_telegram" class="header-contact" href="https://t.me/TIMOTHYIVAIKIN" target="_blank" rel="noopener">Написать Тимофею</a>
   </header>
 
   <main>
@@ -173,8 +182,8 @@
         <h2 id="lead-title">Опишите процесс, который вас раздражает или дорого обходится</h2>
         <p>Форма соберёт короткий текст. После нажатия откроется готовое сообщение в WhatsApp. Ничего не отправится без вашего последнего нажатия.</p>
         <div class="direct-links">
-          <a href="https://t.me/TIMOTHYIVAIKIN" target="_blank" rel="noopener">Telegram @TIMOTHYIVAIKIN</a>
-          <a href="tel:+79956573730">+7 995 657-37-30</a>
+          <a data-goal="contact_telegram" href="https://t.me/TIMOTHYIVAIKIN" target="_blank" rel="noopener">Telegram @TIMOTHYIVAIKIN</a>
+          <a data-goal="contact_phone" href="tel:+79956573730">+7 995 657-37-30</a>
         </div>
       </div>
 
@@ -240,7 +249,7 @@
       <p>Edge Ecosystem · сложные цифровые программы, AI, интеграция и поставка</p>
     </div>
     <div class="footer-links">
-      <a href="https://t.me/TIMOTHYIVAIKIN" target="_blank" rel="noopener">Telegram</a>
+      <a data-goal="contact_telegram" href="https://t.me/TIMOTHYIVAIKIN" target="_blank" rel="noopener">Telegram</a>
       <a href="https://wa.me/79956573730" target="_blank" rel="noopener">WhatsApp</a>
       <a href="/ru/automation-ai/timothy-ivaikin-automation-ai.pdf">PDF</a>
       <a href="/ru/">Edge Ecosystem</a>
@@ -248,5 +257,6 @@
   </footer>
 
   <script type="module" src="/ru/automation-ai/form.js"></script>
+<script src="/assets/app.js" defer></script>
 </body>
 </html>
