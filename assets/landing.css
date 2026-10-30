@@ -6,6 +6,7 @@
   height: auto;
   overflow-x: clip;
 }
+.landing header { padding-top: env(safe-area-inset-top, 0px); }
 .landing .skip-link {
   position: fixed;
   inset-block-start: -100px;
@@ -104,6 +105,48 @@
   .landing .contact-secondary { gap: 10px; }
   .landing .contact-secondary .btn { max-width: 100%; overflow-wrap: anywhere; }
   .landing .section h2 { font-size: 26px; }
+}
+/* Solid plate. Telegram's in-app browser drops backdrop-filter and lets page
+   text show through a translucent bar. */
+.landing .sticky-cta { display: none; }
+@media (max-width: 540px) {
+  .landing .sticky-cta:not([hidden]) {
+    display: flex;
+    position: fixed;
+    z-index: 40;
+    inset-inline: 0;
+    bottom: 0;
+    gap: 8px;
+    align-items: stretch;
+    margin: 0;
+    padding: 12px 12px calc(12px + env(safe-area-inset-bottom, 0px));
+    background: #05060a;
+    border-top: 1px solid #9aa3b2;
+    box-shadow: none;
+  }
+  .landing .sticky-cta .btn {
+    flex: 1 1 0;
+    min-width: 44px;
+    min-height: 44px;
+    margin: 0;
+    padding: 10px 8px;
+    font-size: 14px;
+    line-height: 1.2;
+    white-space: normal;
+    background: #05060a;
+    color: #e8ecf4;
+    border-color: #9aa3b2;
+    box-shadow: none;
+  }
+  .landing .sticky-cta .btn.primary {
+    color: var(--action-ink);
+    background: var(--action);
+    border-color: var(--action);
+  }
+  body.landing.has-sticky-cta {
+    padding-bottom: calc(var(--sticky-cta-height, 76px) + 8px);
+    scroll-padding-bottom: calc(var(--sticky-cta-height, 76px) + 8px);
+  }
 }
 @media (prefers-reduced-motion: reduce) {
   .landing .btn { transition: none; }

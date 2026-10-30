@@ -102,6 +102,7 @@ If you add anything that could slow down:
 - `assets/brand/` — approved Edge logo files used by the brand guide
 - `llms.txt` — public summary of the company and key pages
 - `ru/automation-ai/index.html` — RU evergreen automation/AI lead page
+- `automation-ai/index.html` — redirect to `/ru/automation-ai/` (the page is Russian-only)
 - `ru/insights/team-rhythm/index.html` — RU practical article based on the founder's authored video
 - `zh/index.html` — ZH landing
 - `ar/index.html` — AR landing (RTL)

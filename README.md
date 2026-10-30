@@ -10,6 +10,7 @@ This repository hosts the public website for **Edge Ecosystem** (high-tech landi
 - `/` - English (default)
 - `/ru/` - Russian
 - `/ru/automation-ai/` - permanent Russian automation/AI page with contact handoff and short PDF
+- `/automation-ai/` - redirect to that Russian page (there is no separate English page)
 - `/ru/insights/team-rhythm/` - practical article and copyable team-agreement template, linked to the diagnostic service
 - `/zh/` - Chinese (Simplified)
 - `/ar/` - Arabic (RTL)

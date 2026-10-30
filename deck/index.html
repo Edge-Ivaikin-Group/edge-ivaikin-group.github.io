@@ -21,6 +21,16 @@
   <meta name="twitter:image" content="https://edgeivaikin.com/assets/og/og-home-en-v2.png"/>
   <link rel="stylesheet" href="/assets/styles.css"/>
   <link rel="stylesheet" href="/deck/styles.css"/>
+  <!-- Yandex.Metrika counter (deferred) -->
+  <script>window.ym=window.ym||function(){(window.ym.a=window.ym.a||[]).push(arguments)};
+  function _loadYM(){(function(m,e,t,r,i,k,a){
+  m[i].l=1*new Date();
+  for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return}}
+  k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+  })(window,document,'script','https://mc.yandex.ru/metrika/tag.js','ym');
+  ym(108284737,'init',{ssr:true,webvisor:true,clickmap:true,accurateTrackBounce:true,trackLinks:true});}
+  if('requestIdleCallback' in window){requestIdleCallback(_loadYM)}else{addEventListener('load',_loadYM)}</script>
+  <!-- /Yandex.Metrika counter -->
 </head>
 <body class="bg-grid">
 <header>
@@ -87,10 +97,10 @@
     <h2>Next step</h2>
     <p>Fastest path: send a 60‑second brief via Telegram bot or book a call.</p>
     <div class="cta">
-      <a class="btn primary" href="https://calendar.app.google/4aFN841D87V6or7q9" target="_blank" rel="noopener">Book a call</a>
-      <a class="btn" href="https://t.me/TimothyIvaikin" target="_blank" rel="noopener">@TimothyIvaikin</a>
-      <a class="btn" href="https://t.me/EdgeExecuteBot" target="_blank" rel="noopener">Telegram bot</a>
-      <a class="btn" href="mailto:hello@edgeivaikin.com">hello@edgeivaikin.com</a>
+      <a class="btn primary" data-goal="contact_calendar" href="https://calendar.app.google/4aFN841D87V6or7q9" target="_blank" rel="noopener">Book a call</a>
+      <a class="btn" data-goal="contact_telegram" href="https://t.me/TimothyIvaikin" target="_blank" rel="noopener">@TimothyIvaikin</a>
+      <a class="btn" data-goal="contact_bot" href="https://t.me/EdgeExecuteBot" target="_blank" rel="noopener">Telegram bot</a>
+      <a class="btn" data-goal="contact_email" href="mailto:hello@edgeivaikin.com">hello@edgeivaikin.com</a>
     </div>
   </section>
 </main>
