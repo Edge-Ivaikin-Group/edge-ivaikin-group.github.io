@@ -6,6 +6,8 @@
   --line: #ccd6e2;
   --muted: #52657d;
   --gold: #d5a84f;
+  /* Text and the keyboard ring. #d5a84f is 2.09:1 on --paper, below AA. */
+  --gold-text: #8c6c2d;
   --gold-light: #f2dfb5;
   --green: #2f7158;
   --max: 1120px;
@@ -27,7 +29,7 @@ body {
 a { color: inherit; }
 button, input, textarea { font: inherit; }
 button, a { -webkit-tap-highlight-color: transparent; }
-:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+:focus-visible { outline: 3px solid var(--gold-text); outline-offset: 3px; }
 
 .site-header {
   width: min(calc(100% - 36px), var(--max));
@@ -166,7 +168,7 @@ h2 { margin: 0; font-family: var(--serif); font-size: clamp(38px, 5vw, 62px); li
   border-top: 1px solid var(--line);
 }
 .scenario:last-child { border-bottom: 1px solid var(--line); }
-.scenario-number { color: var(--gold); font-family: var(--serif); font-size: 34px; }
+.scenario-number { color: var(--gold-text); font-family: var(--serif); font-size: 34px; }
 .scenario h3 { margin: 0 0 16px; font-size: 25px; line-height: 1.2; }
 .scenario p { margin: 8px 0; color: var(--muted); }
 .scenario strong { color: var(--ink); }
