@@ -24,4 +24,4 @@ Search & replace:
 ## SEO notes
 - Keep separate URLs per language.
 - Each page includes hreflang and lang/dir attributes.
-- Add real OG image at `/assets/og.png`.
+- Link previews: `node scripts/render-og.mjs` writes `assets/og/og-home-*-v2.png`. The partner brand pages keep `assets/brand/og.png`.
