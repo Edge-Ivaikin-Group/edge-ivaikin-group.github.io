@@ -55,8 +55,7 @@ small{color:var(--muted)}
 }
 header{
   position:sticky; top:0; z-index:50;
-  backdrop-filter: blur(14px);
-  background:rgba(5,6,10,.55);
+  background:#05060a;
   border-bottom:1px solid rgba(255,255,255,.08);
 }
 .nav{

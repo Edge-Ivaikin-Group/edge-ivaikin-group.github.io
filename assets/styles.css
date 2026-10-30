@@ -86,8 +86,10 @@ small{color:var(--muted)}
 }
 header{
   position:sticky; top:0; z-index:50;
-  backdrop-filter: blur(14px);
-  background:rgba(5,6,10,.55);
+  /* Solid plate. A translucent blur let the hero heading show through the
+     nav while scrolling (especially in the Telegram in-app webview, which
+     often drops backdrop-filter). */
+  background:#05060a;
   border-bottom:1px solid rgba(255,255,255,.08);
 }
 .nav{
@@ -96,6 +98,7 @@ header{
 }
 .brand{
   display:flex; align-items:center; gap:12px;
+  min-height:44px;
   font-family:var(--mono);
   letter-spacing:.18em;
 }
@@ -104,7 +107,11 @@ header{
 .navlinks{
   display:flex; align-items:center; gap:18px;
 }
-.navlinks a{color:var(--muted); font-size:14px}
+.navlinks a{
+  display:inline-flex; align-items:center;
+  min-height:44px;
+  color:var(--muted); font-size:14px;
+}
 .navlinks a:hover{color:var(--fg)}
 .lang{
   display:flex; align-items:center; gap:10px;
@@ -112,7 +119,11 @@ header{
   border:1px solid rgba(255,255,255,.10);
   background:rgba(255,255,255,.04);
 }
-.lang a{font-family:var(--mono); font-size:12px; color:var(--muted)}
+.lang a{
+  display:inline-flex; align-items:center; justify-content:center;
+  min-width:44px; min-height:44px;
+  font-family:var(--mono); font-size:12px; color:var(--muted);
+}
 .lang a.active{color:var(--fg)}
 .lang a:hover{color:var(--fg)}
 
@@ -120,6 +131,7 @@ header{
 .grid2{
   display:grid; grid-template-columns: 1.35fr .65fr; gap:20px;
 }
+h1,h2,h3{overflow-wrap:break-word}
 h1{
   margin:18px 0 12px;
   font-size:52px; line-height:1.05; letter-spacing:-.02em;
