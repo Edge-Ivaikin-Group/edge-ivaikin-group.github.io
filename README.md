@@ -114,6 +114,8 @@ Search & replace:
 
 ## Partner programme pages
 
+The Russian homepage's `#proposal-review` section offers Timothy Ivaikin's prepared CRM/automation proposal review for RUB 50,000: one proposal and attachments up to ten pages, a 60-minute meeting, and a one-page recommendation within one business day. The email CTA opens a draft with qualification fields and a fixed page-source label; opening it does not prove an enquiry or payment. This service-specific section adapts the launch copy supplied by Timothy on 7 November 2026 and the existing public founder-experience wording. It adds no corporate-lineage or client-performance claims and leaves other services in force.
+
 `/partners/` and `/ru/partners/` invite referral, delivery and technology collaboration. They reuse current service descriptions and adapt the existing Strategic System Integrators concept: preserve the partner’s customer relationship, agree roles and work packages, and scope a paid Discovery / Architecture Sprint before delivery where needed. New material is the three-track presentation and application flow. They introduce no current alliance, fixed commission, guaranteed lead or ownership claim, and supersede no existing page or agreement.
 
 The form posts to the dedicated public partner-application API on edgefocus.ru. A validated server receipt confirms storage only, not programme acceptance or a response deadline. Email and Telegram remain visible fallbacks. No tracker or session replay is loaded on these pages. Session storage contains only the retry UUID and opening time; an ambiguous response retries the frozen payload on the current page. Reloads preserve the key but not personal fields.

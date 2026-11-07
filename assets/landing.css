@@ -148,6 +148,26 @@
     scroll-padding-bottom: calc(var(--sticky-cta-height, 76px) + 8px);
   }
 }
+.landing .proposal-review { border-block-start: 1px solid var(--stroke); }
+.landing .review-layout { display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr); gap: 56px; align-items: start; }
+.landing .review-copy h2 { max-width: 28ch; font-size: clamp(28px, 3vw, 36px); line-height: 1.2; margin-block: 14px 20px; text-wrap: balance; }
+.landing .review-copy .lead { max-width: 60ch; }
+.landing .review-steps { margin-block: 28px; padding-inline-start: 22px; }
+.landing .review-steps li { padding-inline-start: 8px; margin-block-end: 22px; }
+.landing .review-steps li::marker { color: var(--action); font-weight: 650; }
+.landing .review-steps h3 { margin: 0 0 6px; font-size: 17px; }
+.landing .review-steps p { margin: 0; color: var(--muted); line-height: 1.65; }
+.landing .review-booking { min-width: 0; border: 1px solid var(--action); border-radius: var(--radius); background: var(--bg2); padding: 28px; }
+.landing .review-booking p { line-height: 1.65; }
+.landing .review-booking .review-price { margin: 0; font-size: clamp(34px, 4vw, 44px); font-weight: 700; line-height: 1.2; color: var(--action); }
+.landing .review-booking .review-price-note { margin-block: 6px 24px; color: var(--muted); }
+.landing .review-booking .btn { display: flex; width: 100%; margin-block-start: 24px; }
+.landing .review-booking .handoff-note { overflow-wrap: anywhere; }
+.landing .review-booking .review-terms { border-block-start: 1px solid var(--stroke); margin-block: 24px 0; padding-block-start: 20px; color: var(--muted); font-size: 13px; }
+@media (max-width: 800px) {
+  .landing .review-layout { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .landing .review-booking { padding: 24px; }
+}
 @media (prefers-reduced-motion: reduce) {
   .landing .btn { transition: none; }
   .landing .btn:hover { transform: none; }
