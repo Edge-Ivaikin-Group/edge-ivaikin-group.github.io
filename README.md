@@ -17,6 +17,7 @@ This repository hosts the public website for **Edge Ecosystem** (high-tech landi
 - `/partners/` and `/ru/partners/` - partner invitation and application
 - `/partners/brand/` and `/ru/partners/brand/` - partner brand guide
 - `/llms.txt` - public summary of the company and key pages
+- `/cases/`, `/ru/cases/`, `/zh/cases/`, `/ar/cases/` - project portfolio
 - `/deck/` - HTML capabilities deck (keyboard: ← →)
 - `/EdgeEcosystem_Capabilities_Deck_EN.pdf` - PDF deck (EN)
 - `/sitemap.xml` + `/robots.txt` - SEO basics
@@ -121,3 +122,7 @@ The Russian homepage's `#proposal-review` section offers Timothy Ivaikin's prepa
 The form posts to the dedicated public partner-application API on edgefocus.ru. A validated server receipt confirms storage only, not programme acceptance or a response deadline. Email and Telegram remain visible fallbacks. No tracker or session replay is loaded on these pages. Session storage contains only the retry UUID and opening time; an ambiguous response retries the frozen payload on the current page. Reloads preserve the key but not personal fields.
 
 For a trusted staging build, inject `data-endpoint` on `#partner-form` with the explicit staging API URL. Query parameters never select an endpoint. `?qa=1` is carried through partner navigation but does not fake or suppress a submission. Use synthetic details only when testing against a real server. Run `node --test tests/*.test.mjs`. Live persistence and admin-inbox readiness must be verified before publication; local tests alone do not establish delivery.
+
+## Project portfolio
+
+The case pages replace the three short cards on the homepages. They reuse the public CRM and regulatory-platform descriptions, the Discover Culture launch and event references, and the published EdgeFocus and partner flows. The new entries describe specific technical roles and deliverables, with dates and reported figures attributed to the sources they describe. The Discover Culture entry follows Timothy Ivaikin’s confirmation that he did the work through Enlightened Ventures LLC-FZ in Dubai. The four pages share case IDs and reciprocal language links.
