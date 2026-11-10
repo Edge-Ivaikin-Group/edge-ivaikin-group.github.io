@@ -51,3 +51,36 @@ test('each locale identifies the shared portfolio and includes the Techno Media 
     }
   }
 });
+
+test('the regulatory portal case preserves both legacy anchors and exposes both indexed editions', async () => {
+  const domain = 'https://edgeivaikin.com';
+  const enPath = '/cases/regulatory-portal/';
+  const ruPath = '/ru/cases/regulatory-portal/';
+  const sitemap = await read('sitemap.xml');
+  const llms = await read('llms.txt');
+  const titles = [];
+  for (const [lang, path, portfolio] of [['en', enPath, '/cases/'], ['ru', ruPath, '/ru/cases/']]) {
+    const index = await read(`${portfolio.slice(1)}index.html`);
+    const card = index.match(/<article id="regulatory-portal"[\s\S]*?<\/article>/)?.[0];
+    assert.ok(card?.includes(`href="${path}"`), 'legacy anchor leads to its localized story');
+    const page = await read(`${path.slice(1)}index.html`);
+    assert.ok(page.includes(`<html lang="${lang}"`));
+    titles.push(page.match(/<title>(.+)<\/title>/)?.[1]);
+    assert.ok(page.includes(`rel="canonical" href="${domain}${path}"`));
+    for (const [alternate, target] of [['en', enPath], ['ru', ruPath], ['x-default', enPath]]) {
+      assert.ok(page.includes(`hreflang="${alternate}" href="${domain}${target}"`));
+    }
+    assert.ok(page.includes(`href="${portfolio}#regulatory-portal"`));
+    assert.ok(sitemap.includes(`<loc>${domain}${path}</loc>`));
+    assert.ok(llms.includes(`(${domain}${path})`));
+    const article = JSON.parse(page.match(/<script type="application\/ld\+json">([\s\S]+?)<\/script>/)[1]);
+    assert.equal(article['@type'], 'Article');
+    assert.equal(article.inLanguage, lang);
+    assert.equal(article.mainEntityOfPage, domain + path);
+    const imagePath = new URL(article.image).pathname;
+    assert.ok((await readFile(new URL(imagePath.slice(1), root))).length < 150_000);
+    assert.match(page, /<figcaption>[^<]+<\/figcaption>/);
+  }
+  assert.ok(titles.every(Boolean));
+  assert.notEqual(...titles);
+});

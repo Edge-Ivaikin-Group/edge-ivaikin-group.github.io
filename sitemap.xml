@@ -40,4 +40,14 @@
   <url><loc>https://edgeivaikin.com/ru/cases/</loc></url>
   <url><loc>https://edgeivaikin.com/zh/cases/</loc></url>
   <url><loc>https://edgeivaikin.com/ar/cases/</loc></url>
+  <url><loc>https://edgeivaikin.com/cases/regulatory-portal/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://edgeivaikin.com/cases/regulatory-portal/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://edgeivaikin.com/ru/cases/regulatory-portal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edgeivaikin.com/cases/regulatory-portal/"/>
+  </url>
+  <url><loc>https://edgeivaikin.com/ru/cases/regulatory-portal/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://edgeivaikin.com/cases/regulatory-portal/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://edgeivaikin.com/ru/cases/regulatory-portal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edgeivaikin.com/cases/regulatory-portal/"/>
+  </url>
 </urlset>

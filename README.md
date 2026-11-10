@@ -18,6 +18,7 @@ This repository hosts the public website for **Edge Ecosystem** (high-tech landi
 - `/partners/brand/` and `/ru/partners/brand/` - partner brand guide
 - `/llms.txt` - public summary of the company and key pages
 - `/cases/`, `/ru/cases/`, `/zh/cases/`, `/ar/cases/` - project portfolio
+- `/cases/regulatory-portal/`, `/ru/cases/regulatory-portal/` - English and Russian editions of the existing anonymized case. The original portfolio anchors still link into both editions.
 - `/deck/` - HTML capabilities deck (keyboard: ← →)
 - `/EdgeEcosystem_Capabilities_Deck_EN.pdf` - PDF deck (EN)
 - `/sitemap.xml` + `/robots.txt` - SEO basics

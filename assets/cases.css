@@ -37,3 +37,104 @@
 @media (max-width: 700px) {
   .case-grid { grid-template-columns: minmax(0, 1fr); }
 }
+
+/* Regulatory portal case and its portfolio preview */
+.portal-case {
+  background: radial-gradient(ellipse at top, #161d25 0%, var(--bg) 48rem) no-repeat var(--bg);
+}
+.portal-case .lang { gap: 12px; }
+.portal-case-back {
+  margin-block: 18px 24px;
+}
+.portal-case-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(24px, 5vw, 64px);
+}
+.portal-case-hero h1 {
+  font-size: clamp(32px, 4.4vw, 56px);
+  line-height: 1.07;
+  letter-spacing: -.035em;
+  margin-block: 12px 20px;
+  overflow-wrap: break-word;
+}
+.portal-case-intro {
+  max-width: 50ch;
+  color: var(--muted);
+  font-size: clamp(17px, 1.75vw, 20px);
+  line-height: 1.55;
+  margin: 0;
+}
+.portal-case-image { margin: 0; }
+.portal-case-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--stroke);
+  border-radius: 8px;
+}
+.portal-case-image figcaption {
+  margin-block-start: 8px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.4;
+}
+.case-card .portal-case-image { margin-block-end: 18px; }
+.portal-case-facts {
+  display: grid;
+  grid-template-columns: 0.8fr 1.1fr 1.1fr;
+  gap: 24px;
+  padding-block: 24px;
+  margin-block: 34px 0;
+  border-block: 1px solid var(--stroke);
+}
+.portal-case-facts dt { color: var(--case-gold); font-size: 14px; font-weight: 650; }
+.portal-case-facts dd { margin: 6px 0 0; line-height: 1.45; }
+.portal-case-body { max-width: 70ch; }
+.portal-case-body section { margin-block: clamp(36px, 6vw, 64px); }
+.portal-case-body h2,
+.portal-case-contact h2 {
+  font-size: clamp(24px, 3vw, 34px);
+  line-height: 1.2;
+  margin-block: 0 12px;
+}
+.portal-case-body p,
+.portal-case-scope dd {
+  color: var(--muted);
+  line-height: 1.65;
+  margin: 0;
+}
+.portal-case-scope { margin-block: 22px 0; }
+.portal-case-scope div {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  gap: 12px;
+  padding-block: 14px;
+  border-top: 1px solid var(--stroke);
+}
+.portal-case-scope dt { font-weight: 700; }
+.portal-case-contact {
+  margin-block: 0 56px;
+  padding: clamp(20px, 4vw, 40px);
+  background: #101117;
+  border: 1px solid var(--stroke);
+  border-radius: var(--radius);
+}
+.portal-case-contact .btn {
+  min-height: 44px;
+  white-space: normal;
+  text-align: center;
+}
+@media (max-width: 760px) {
+  .portal-case-hero, .portal-case-facts {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .portal-case-facts { gap: 18px; }
+}
+@media (max-width: 480px) {
+  .portal-case-scope div {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 4px;
+  }
+}
