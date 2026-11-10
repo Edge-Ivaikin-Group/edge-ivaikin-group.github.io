@@ -7,10 +7,10 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Edge Ecosystem - HTML Deck</title>
-  <meta name="description" content="HTML deck: capabilities and packaging."/>
-  <meta property="og:title" content="Edge Ecosystem - HTML Deck"/>
-  <meta property="og:description" content="HTML deck: capabilities and packaging."/>
+  <title>Edge Ecosystem | Enterprise delivery capabilities</title>
+  <meta name="description" content="See what Edge ships, how a first delivery stage works, and what your team gets at handover."/>
+  <meta property="og:title" content="Edge Ecosystem | Enterprise delivery capabilities"/>
+  <meta property="og:description" content="See what Edge ships, how a first delivery stage works, and what your team gets at handover."/>
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="https://edgeivaikin.com/deck/"/>
   <meta property="og:image" content="https://edgeivaikin.com/assets/og/og-home-en-v2.png"/>
@@ -19,8 +19,8 @@
   <meta property="og:image:alt" content="Gold Edge logo. Edge gets stalled digital projects to an accepted result."/>
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:image" content="https://edgeivaikin.com/assets/og/og-home-en-v2.png"/>
-  <link rel="stylesheet" href="/assets/styles.css"/>
-  <link rel="stylesheet" href="/deck/styles.css"/>
+  <link rel="canonical" href="https://edgeivaikin.com/deck/"/>
+  <link rel="stylesheet" href="/deck/styles.css?v=2"/>
   <!-- Yandex.Metrika counter (deferred) -->
   <script>window.ym=window.ym||function(){(window.ym.a=window.ym.a||[]).push(arguments)};
   function _loadYM(){(function(m,e,t,r,i,k,a){
@@ -32,79 +32,154 @@
   if('requestIdleCallback' in window){requestIdleCallback(_loadYM)}else{addEventListener('load',_loadYM)}</script>
   <!-- /Yandex.Metrika counter -->
 </head>
-<body class="bg-grid">
-<header>
-  <div class="container nav">
-    <a class="brand" href="/"><img class="brand-logo" src="/assets/brand/edge-logo-gold-header.svg" width="135" height="28" alt="Edge"></a>
-    <div class="pill">HTML Deck • Use <span class="kbd">←</span> <span class="kbd">→</span></div>
-    <div class="lang">
-      <a class="active" href="/deck/">DECK</a>
-      <a href="/">SITE</a>
-    </div>
+<body>
+<header class="deck-header">
+  <div class="container header-inner">
+    <a class="brand" href="/"><img class="brand-logo" src="/assets/brand/edge-logo-gold-header.svg" width="135" height="28" alt="Edge Ecosystem"></a>
+    <span>Capabilities briefing</span>
+    <a class="site-link" href="/">Company site</a>
   </div>
 </header>
 
-<main class="deck-wrap container" data-deck>
-  <section class="slide">
-    <div class="pill">Capabilities deck</div>
-    <h2>Edge Ecosystem</h2>
-    <p>Enterprise-ready B2B platforms, CRM, automation, integrations. Pilot MVP in 2–6 weeks, then monthly delivery. Proven solutions become repeatable delivery playbooks.</p>
-    <div class="cols">
-      <div class="mini"><h3>Primary goals</h3><p>Measurable outcomes, clear contracts, clean IP hygiene, enterprise trust.</p></div>
-      <div class="mini"><h3>Fast CTA</h3><p>Book a call or qualify via Telegram bot.</p></div>
-    </div>
-  </section>
+<div class="container deck-shell" data-deck>
+  <nav class="deck-contents" aria-label="Deck sections">
+    <a href="#1">Overview</a>
+    <a href="#5">Work</a>
+    <a href="#2">Where we fit</a>
+    <a href="#3">First stage</a>
+    <a href="#4">Handover</a>
+    <a href="#6">Contact</a>
+  </nav>
 
-  <section class="slide">
-    <h2>What we build</h2>
-    <div class="cards3">
-      <div class="mini"><h3>Platforms & CRM</h3><p>Portals, RBAC, workflows, approvals, analytics.</p></div>
-      <div class="mini"><h3>Automation & integrations</h3><p>APIs, bots, ETL, event pipelines, payments.</p></div>
-      <div class="mini"><h3>Reliability</h3><p>CI/CD, observability, runbooks, release discipline.</p></div>
-    </div>
-  </section>
+  <main>
+    <section class="slide cover" id="1" aria-labelledby="overview-title">
+      <div class="slide-inner cover-layout">
+        <div>
+          <p class="slide-label">CRM, portals and systems integration</p>
+          <h1 id="overview-title" tabindex="-1">Get one critical workflow working end to end.</h1>
+          <p class="lead">Edge Ecosystem builds and integrates business software for teams losing time to disconnected tools, manual handoffs and stalled releases.</p>
+          <div class="actions">
+            <a class="button primary" href="#6">Discuss your workflow</a>
+            <a class="text-link" href="#5">See selected work</a>
+          </div>
+        </div>
+        <figure class="workflow">
+          <figcaption>Example · Lead handoff</figcaption>
+          <ol>
+            <li><strong>Capture the request</strong><span>From the channels your team uses</span></li>
+            <li><strong>Assign the owner</strong><span>Route it and record the next action</span></li>
+            <li><strong>Track the outcome</strong><span>See status, history and stalled follow-ups</span></li>
+          </ol>
+        </figure>
+      </div>
+    </section>
 
-  <section class="slide">
-    <h2>Engagement model</h2>
-    <p>Prove value fast, then scale.</p>
-    <div class="timeline">
-      <div class="step"><div class="badge">1</div><div><b>Pilot MVP (2–6 weeks)</b><br/>One metric + demo + decision artifact.</div></div>
-      <div class="step"><div class="badge">2</div><div><b>Monthly retainer</b><br/>Roadmap + continuous delivery + measurable improvements.</div></div>
-      <div class="step"><div class="badge">3</div><div><b>Productize</b><br/>License/white-label for adjacent companies.</div></div>
-    </div>
-  </section>
+    <section class="slide" id="5" aria-labelledby="work-title">
+      <div class="slide-inner">
+        <p class="slide-label">Selected work</p>
+        <h2 id="work-title" tabindex="-1">What Edge shipped</h2>
+        <div class="case-list">
+          <article>
+            <h3>Marketing CRM MVP</h3>
+            <p>Built a working MVP that consolidated lead tracking, user roles and reporting in one place.</p>
+            <a class="text-link" href="/cases/#marketing-crm">CRM case</a>
+          </article>
+          <article>
+            <h3>Registration and regulatory portals</h3>
+            <p>Delivered registration and regulatory workflow components within a wider economic development programme.</p>
+            <a class="text-link" href="/cases/#regulatory-portal">Portal case</a>
+          </article>
+          <article>
+            <h3>Partner application intake</h3>
+            <p>Connected three application paths to EdgeFocus. Once a submission is saved, the applicant receives a reference number.</p>
+            <a class="text-link" href="/cases/#partner-intake">Intake case</a>
+          </article>
+        </div>
+        <a class="text-link" href="/cases/">Browse the project portfolio</a>
+      </div>
+    </section>
 
-  <section class="slide">
-    <h2>Enterprise readiness</h2>
-    <div class="cards3">
-      <div class="mini"><h3>Security</h3><p>Least privilege, audit logs, secrets hygiene.</p></div>
-      <div class="mini"><h3>Operations</h3><p>Monitoring, backups, incident playbooks.</p></div>
-      <div class="mini"><h3>Procurement</h3><p>Docs, traceability, clear deliverables.</p></div>
-    </div>
-  </section>
+    <section class="slide" id="2" aria-labelledby="fit-title">
+      <div class="slide-inner">
+        <p class="slide-label">Where we fit</p>
+        <h2 id="fit-title" tabindex="-1">Which part of the work keeps getting stuck?</h2>
+        <div class="columns">
+          <article>
+            <p class="category">CRM and portals</p>
+            <h3>Requests get lost between teams</h3>
+            <p>Give each request an owner, status and history in one workspace. Build in permissions, approvals and reporting around the way people work.</p>
+          </article>
+          <article>
+            <p class="category">Automation and integration</p>
+            <h3>People re-enter the same data</h3>
+            <p>Connect systems through APIs, data sync or event-driven workflows so information reaches the next team without manual copying.</p>
+          </article>
+          <article>
+            <p class="category">Delivery and reliability</p>
+            <h3>Releases are hard to repeat</h3>
+            <p>Improve build and release pipelines, monitoring and runbooks so your team can deploy and operate the system with a repeatable process.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-  <section class="slide">
-    <h2>Proof (selected real cases)</h2>
-    <p>Audit-safe, factual mini-cases (anonymized).</p>
-    <div class="cards3">
-      <div class="mini"><h3>Case #1</h3><p>Marketing CRM MVP: fragmented tools -> CRM MVP -> demand validated, rollout plan.</p></div>
-      <div class="mini"><h3>Case #2</h3><p>AI media workflow: manual content ops -> AI-assisted workflow -> faster turnaround.</p></div>
-      <div class="mini"><h3>Case #3</h3><p>Fleet ops UI: inconsistent UI -> unified frontend + stable releases -> clearer control.</p></div>
-    </div>
-  </section>
+    <section class="slide" id="3" aria-labelledby="stage-title">
+      <div class="slide-inner">
+        <p class="slide-label">First stage</p>
+        <h2 id="stage-title" tabindex="-1">Agree how you’ll accept the work before we build.</h2>
+        <ol class="steps">
+          <li><h3>Scope one workflow</h3><p>Identify the people, systems and access involved. Agree the deliverable, budget and what must be true for you to accept it.</p></li>
+          <li><h3>Demonstrate it end to end</h3><p>Walk through the agreed workflow and review it against the acceptance criteria and the metric chosen for the pilot.</p></li>
+          <li><h3>Decide what to do next</h3><p>Use the review to choose whether to extend the workflow, move into ongoing delivery or conclude the engagement.</p></li>
+        </ol>
+        <p class="aside-note">A narrowly scoped pilot is typically estimated at 2–6 weeks, depending on scope, system access and integrations. <a class="text-link" href="/#pricing">See published starting prices</a>.</p>
+      </div>
+    </section>
 
-  <section class="slide">
-    <h2>Next step</h2>
-    <p>Fastest path: send a 60‑second brief via Telegram bot or book a call.</p>
-    <div class="cta">
-      <a class="btn primary" data-goal="contact_calendar" href="https://calendar.app.google/4aFN841D87V6or7q9" target="_blank" rel="noopener">Book a call</a>
-      <a class="btn" data-goal="contact_telegram" href="https://t.me/TimothyIvaikin" target="_blank" rel="noopener">@TimothyIvaikin</a>
-      <a class="btn" data-goal="contact_bot" href="https://t.me/EdgeExecuteBot" target="_blank" rel="noopener">Telegram bot</a>
-      <a class="btn" data-goal="contact_email" href="mailto:hello@edgeivaikin.com">hello@edgeivaikin.com</a>
-    </div>
-  </section>
-</main>
+    <section class="slide" id="4" aria-labelledby="handover-title">
+      <div class="slide-inner">
+        <p class="slide-label">Handover</p>
+        <h2 id="handover-title" tabindex="-1">Your team needs to run it after delivery.</h2>
+        <p class="lead">We agree which controls and handover materials are part of your scope before development starts.</p>
+        <dl class="handover-list">
+          <div><dt>Access and audit</dt><dd>Define who can see and change what, which actions are logged and how secrets are managed.</dd></div>
+          <div><dt>Operations</dt><dd>Agree monitoring, backup and release responsibilities. Document the operating steps in runbooks.</dd></div>
+          <div><dt>Ownership and acceptance</dt><dd>Put deliverables, repository access, IP terms and acceptance criteria into the scope.</dd></div>
+        </dl>
+      </div>
+    </section>
 
-<script src="/assets/app.js" defer></script>
+    <section class="slide" id="6" aria-labelledby="contact-title">
+      <div class="slide-inner cover-layout">
+        <div>
+          <p class="slide-label">Contact</p>
+          <h2 id="contact-title" tabindex="-1">Tell us where the work gets stuck.</h2>
+          <p class="lead">A short brief is enough to start. We’ll use it to discuss what a first stage could deliver.</p>
+          <div class="actions">
+            <a class="button primary" data-goal="contact_telegram" href="https://t.me/TimothyIvaikin">Message Timothy on Telegram</a>
+            <a class="button" data-goal="contact_calendar" href="https://calendar.app.google/4aFN841D87V6or7q9">Book a call</a>
+          </div>
+          <p class="contact-links"><a class="text-link" data-goal="contact_email" href="mailto:hello@edgeivaikin.com?subject=Edge%20project%20brief&amp;body=What%20is%20getting%20stuck%3F%0A%0AWhich%20teams%20and%20systems%20are%20involved%3F%0A%0AWhat%20result%20do%20you%20need%2C%20and%20by%20when%3F">Email a brief</a><a class="text-link" data-goal="contact_bot" href="https://t.me/EdgeExecuteBot">Telegram bot</a></p>
+        </div>
+        <aside class="brief">
+          <h3>Three things to include</h3>
+          <ol>
+            <li>What is getting stuck?</li>
+            <li>Which teams and systems are involved?</li>
+            <li>What result do you need, and by when?</li>
+          </ol>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <nav class="deck-controls" aria-label="Slide navigation" hidden>
+    <button type="button" data-previous>← Previous</button>
+    <p data-slide-count aria-live="polite" aria-atomic="true"></p>
+    <button type="button" data-next>Next →</button>
+  </nav>
+</div>
+
+<script src="/assets/app.js?v=deck2" defer></script>
 </body>
 </html>

@@ -64,22 +64,73 @@ document.addEventListener("click", (e) => {
   update();
 })();
 
-(function(){
+(function () {
   const deck = document.querySelector("[data-deck]");
-  if(!deck) return;
-  const slides = Array.from(document.querySelectorAll(".slide"));
-  let i = 0;
-  function show(n){
-    i = Math.max(0, Math.min(slides.length-1, n));
-    slides.forEach((s, idx)=> s.classList.toggle("active", idx===i));
-    history.replaceState(null, "", `#${i+1}`);
+  if (!deck) return;
+  const slides = Array.from(deck.querySelectorAll(".slide"));
+  const links = Array.from(deck.querySelectorAll(".deck-contents a"));
+  const controls = deck.querySelector(".deck-controls");
+  const previous = controls.querySelector("[data-previous]");
+  const next = controls.querySelector("[data-next]");
+  const count = controls.querySelector("[data-slide-count]");
+  let current = 0;
+
+  function show(focus = false) {
+    const index = slides.findIndex(slide => "#" + slide.id === location.hash);
+    current = Math.max(0, index);
+    slides.forEach((slide, position) => {
+      slide.hidden = position !== current;
+    });
+    links.forEach(link => {
+      if (link.hash === "#" + slides[current].id) link.setAttribute("aria-current", "location");
+      else link.removeAttribute("aria-current");
+    });
+    previous.disabled = current === 0;
+    next.disabled = current === slides.length - 1;
+    count.textContent = (current + 1) + " / " + slides.length;
+    if (focus) {
+      slides[current].querySelector("h1, h2").focus({ preventScroll: true });
+      window.scrollTo(0, 0);
+    }
   }
-  const h = location.hash.match(/^#(\d+)$/);
-  if(h) show(parseInt(h[1],10)-1); else show(0);
-  window.addEventListener("keydown", (e)=>{
-    if(["ArrowRight","PageDown"," "].includes(e.key)) show(i+1);
-    if(["ArrowLeft","PageUp"].includes(e.key)) show(i-1);
-    if(e.key==="Home") show(0);
-    if(e.key==="End") show(slides.length-1);
+
+  function go(index) {
+    if (index < 0 || index >= slides.length || index === current) return;
+    history.pushState(null, "", "#" + slides[index].id);
+    show(true);
+  }
+
+  previous.addEventListener("click", () => go(current - 1));
+  next.addEventListener("click", () => go(current + 1));
+  deck.addEventListener("click", event => {
+    const link = event.target.closest('a[href^="#"]');
+    if (!link || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    const index = slides.findIndex(slide => "#" + slide.id === link.getAttribute("href"));
+    if (index === -1) return;
+    event.preventDefault();
+    go(index);
   });
+  window.addEventListener("hashchange", () => show(true));
+  window.addEventListener("keydown", event => {
+    if (event.defaultPrevented || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+    if (event.target.closest("input, select, textarea, [contenteditable]")) return;
+    let index;
+    switch (event.key) {
+      case "ArrowRight":
+      case "PageDown": index = current + 1; break;
+      case "ArrowLeft":
+      case "PageUp": index = current - 1; break;
+      case "Home": index = 0; break;
+      case "End": index = slides.length - 1; break;
+      case " ":
+        if (event.target.closest("button, a")) return;
+        index = current + 1;
+        break;
+      default: return;
+    }
+    event.preventDefault();
+    go(index);
+  });
+  controls.hidden = false;
+  show();
 })();
