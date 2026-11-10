@@ -46,8 +46,10 @@ test('each locale identifies the shared portfolio and includes the Techno Media 
     for (const id of ['hotel-booking', 'freight-intake-design', 'broker-operations-platforms', 'white-label-agent-crm']) {
       assert.ok(page.includes(`id="${id}"`));
     }
+    const furniture = page.match(/<article id="furniture-mobile-store"[\s\S]*?<\/article>/)?.[0];
+    assert.match(furniture ?? '', /Android[\s\S]*APK/);
     const cards = [...page.matchAll(/<article id="[^"]+" class="case-card">([\s\S]*?)<\/article>/g)];
-    assert.equal(cards.length, 60);
+    assert.equal(cards.length, 67);
     for (const [, card] of cards) {
       assert.match(card, /class="case-credit">[^<]+<\/p>/);
       assert.ok((card.match(/<dt>/g) ?? []).length >= 1);
