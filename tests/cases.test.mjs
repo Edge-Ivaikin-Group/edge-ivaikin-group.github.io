@@ -36,8 +36,14 @@ test('each locale identifies the shared portfolio and includes the Techno Media 
     assert.ok(page.includes('id="habcluster"'));
     assert.ok(page.includes('id="repair-crsa"'));
     assert.ok(page.includes('id="oil-internships"'));
+    const internship = page.match(/<article id="oil-internships"[\s\S]*?<\/article>/)?.[0];
+    assert.ok(internship?.includes('2014'));
+    assert.ok(internship?.includes('src="/assets/cases/techno-media-internship-certificate-2014.webp"'));
+
+    assert.ok(page.includes('id="inventory-service-design"'));
+    assert.ok(page.includes('id="tm-business-analytics"'));
     const cards = [...page.matchAll(/<article id="[^"]+" class="case-card">([\s\S]*?)<\/article>/g)];
-    assert.equal(cards.length, 37);
+    assert.equal(cards.length, 39);
     for (const [, card] of cards) {
       assert.match(card, /class="case-credit">[^<]+<\/p>/);
       assert.ok((card.match(/<dt>/g) ?? []).length >= 1);

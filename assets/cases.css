@@ -25,6 +25,10 @@
 .case-card dt { font-size: 14px; font-weight: 700; margin-block-start: 14px; }
 .case-card dd { margin: 4px 0 0; color: var(--muted); line-height: 1.55; overflow-wrap: anywhere; }
 .case-card .case-links { margin-block-start: 10px; }
+.case-evidence { margin: 16px 0 0; }
+.case-evidence img { display: block; width: min(100%, 220px); height: auto; border-radius: 6px; border: 1px solid var(--stroke); }
+.case-evidence-wide img { width: 100%; }
+.case-evidence figcaption { margin-block-start: 8px; color: var(--muted); font-size: 13px; line-height: 1.45; }
 #archive-index { margin-block: 34px 14px; }
 .archive-grid .case-card h3 { font-size: clamp(18px, 2vw, 22px); }
 .cases-end { border-top: 1px solid var(--stroke); }
