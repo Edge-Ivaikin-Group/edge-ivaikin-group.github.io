@@ -39,6 +39,7 @@ test('each locale identifies the shared portfolio and includes the Techno Media 
     const internship = page.match(/<article id="oil-internships"[\s\S]*?<\/article>/)?.[0];
     assert.ok(internship?.includes('2014'));
     assert.ok(internship?.includes('src="/assets/cases/techno-media-internship-certificate-2014.webp"'));
+    assert.ok(internship?.includes('src="/assets/cases/techno-media-refinery-equipment-certificate-2014.webp"'));
 
     assert.ok(page.includes('id="inventory-service-design"'));
     assert.ok(page.includes('id="tm-business-analytics"'));

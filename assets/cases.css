@@ -28,6 +28,8 @@
 .case-evidence { margin: 16px 0 0; }
 .case-evidence img { display: block; width: min(100%, 220px); height: auto; border-radius: 6px; border: 1px solid var(--stroke); }
 .case-evidence-wide img { width: 100%; }
+.case-certificate-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.case-evidence-note { color: var(--muted); font-size: 13px; line-height: 1.45; }
 .case-evidence figcaption { margin-block-start: 8px; color: var(--muted); font-size: 13px; line-height: 1.45; }
 #archive-index { margin-block: 34px 14px; }
 .archive-grid .case-card h3 { font-size: clamp(18px, 2vw, 22px); }
