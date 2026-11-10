@@ -47,7 +47,7 @@ test('each locale identifies the shared portfolio and includes the Techno Media 
       assert.ok(page.includes(`id="${id}"`));
     }
     const cards = [...page.matchAll(/<article id="[^"]+" class="case-card">([\s\S]*?)<\/article>/g)];
-    assert.equal(cards.length, 50);
+    assert.equal(cards.length, 60);
     for (const [, card] of cards) {
       assert.match(card, /class="case-credit">[^<]+<\/p>/);
       assert.ok((card.match(/<dt>/g) ?? []).length >= 1);
