@@ -49,7 +49,7 @@ test('each locale identifies the shared portfolio and includes the Techno Media 
     const furniture = page.match(/<article id="furniture-mobile-store"[\s\S]*?<\/article>/)?.[0];
     assert.match(furniture ?? '', /Android[\s\S]*APK/);
     const cards = [...page.matchAll(/<article id="[^"]+" class="case-card">([\s\S]*?)<\/article>/g)];
-    assert.equal(cards.length, 112);
+    assert.equal(cards.length, 113);
     for (const [, card] of cards) {
       assert.match(card, /class="case-credit">[^<]+<\/p>/);
       assert.ok((card.match(/<dt>/g) ?? []).length >= 1);
