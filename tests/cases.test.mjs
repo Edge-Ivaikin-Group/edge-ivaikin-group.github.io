@@ -26,3 +26,21 @@ test('case pages are discoverable and present the same cases in every language',
   }
   assert.match(await read('ar/cases/index.html'), /<html lang="ar" dir="rtl">/);
 });
+
+test('each locale identifies the shared portfolio and includes the Techno Media archive', async () => {
+  for (const locale of locales) {
+    const page = await read(`${locale}cases/index.html`);
+    assert.match(page, /<h1 id="portfolio-title">/);
+    assert.ok(page.includes('href="#techno-media"'));
+    assert.ok(page.includes('id="techno-media"'));
+    assert.ok(page.includes('id="habcluster"'));
+    assert.ok(page.includes('id="repair-crsa"'));
+    assert.ok(page.includes('id="oil-internships"'));
+    const cards = [...page.matchAll(/<article id="[^"]+" class="case-card">([\s\S]*?)<\/article>/g)];
+    assert.equal(cards.length, 37);
+    for (const [, card] of cards) {
+      assert.match(card, /class="case-credit">[^<]+<\/p>/);
+      assert.ok((card.match(/<dt>/g) ?? []).length >= 1);
+    }
+  }
+});

@@ -19,11 +19,14 @@
 .case-link { display: inline-flex; align-items: center; min-height: 44px; color: var(--case-gold); text-decoration: underline; text-underline-offset: .25em; }
 .case-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
 .case-card { padding: clamp(18px, 3vw, 28px); border: 1px solid var(--stroke); background: #101117; border-radius: var(--radius); }
-.case-card h3 { font-size: clamp(21px, 2.5vw, 28px); line-height: 1.18; margin-block: 8px 20px; }
+.case-card h3 { font-size: clamp(21px, 2.5vw, 28px); line-height: 1.18; margin-block: 8px 12px; }
+.case-credit { color: var(--case-gold); font-size: 14px; line-height: 1.45; margin: 0 0 16px; }
 .case-card dl { margin: 0; }
 .case-card dt { font-size: 14px; font-weight: 700; margin-block-start: 14px; }
 .case-card dd { margin: 4px 0 0; color: var(--muted); line-height: 1.55; overflow-wrap: anywhere; }
 .case-card .case-links { margin-block-start: 10px; }
+#archive-index { margin-block: 34px 14px; }
+.archive-grid .case-card h3 { font-size: clamp(18px, 2vw, 22px); }
 .cases-end { border-top: 1px solid var(--stroke); }
 @media (max-width: 700px) {
   .case-grid { grid-template-columns: minmax(0, 1fr); }
