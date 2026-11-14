@@ -17,6 +17,8 @@ This repository hosts the public website for **Edge Ecosystem** (high-tech landi
 - `/partners/` and `/ru/partners/` - partner invitation and application
 - `/partners/brand/` and `/ru/partners/brand/` - partner brand guide
 - `/llms.txt` - public summary of the company and key pages
+- `/cases/`, `/ru/cases/`, `/zh/cases/`, `/ar/cases/` - project portfolio
+- `/cases/regulatory-portal/`, `/ru/cases/regulatory-portal/` - English and Russian editions of the existing anonymized case. The original portfolio anchors still link into both editions.
 - `/deck/` - HTML capabilities deck (keyboard: ← →)
 - `/EdgeEcosystem_Capabilities_Deck_EN.pdf` - PDF deck (EN)
 - `/sitemap.xml` + `/robots.txt` - SEO basics
@@ -125,3 +127,7 @@ For a trusted staging build, inject `data-endpoint` on `#partner-form` with the 
 ## Press rooms
 
 Run `node scripts/build-press.mjs` after changing `content/press.json`. `/press/`, `/ru/press/`, `/zh/press/` and `/ar/press/` provide public company background, media contact, links to existing approved brand assets and clearly attributed founder materials. English/Russian downloadable background notes reuse current public service descriptions. Founder attendance and personal recognition are not company awards or partnerships; full releases retain their canonical personal-site URLs. New copy is editorial navigation and concise background, with no new legal-history, client or financial claim. Existing services, portfolio and brand guide remain in force. No private review files or strategy links are published.
+
+## Project portfolio
+
+The case pages replace the three short cards on the homepages. They reuse the public CRM and regulatory-platform descriptions, the Discover Culture launch and event references, and the published EdgeFocus and partner flows. The new entries describe specific technical roles and deliverables, with dates and reported figures attributed to the sources they describe. The Discover Culture entry follows Timothy Ivaikin’s confirmation that he did the work through Enlightened Ventures LLC-FZ in Dubai. The four pages share case IDs and reciprocal language links.

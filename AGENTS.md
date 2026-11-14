@@ -108,6 +108,7 @@ If you add anything that could slow down:
 - `ru/insights/team-rhythm/index.html` — RU practical article based on the founder's authored video
 - `zh/index.html` — ZH landing
 - `ar/index.html` — AR landing (RTL)
+- `cases/index.html`, `ru/cases/index.html`, `zh/cases/index.html`, `ar/cases/index.html` — project portfolio
 - `deck/index.html` — HTML capabilities deck
 - `assets/styles.css` — global styles (high-tech theme)
 - `assets/app.js` — minimal JS (smooth scroll + deck keys)
