@@ -1,0 +1,203 @@
+{
+  "site": "https://edgeivaikin.com",
+  "brand": "Edge Ecosystem",
+  "kind": "company",
+  "paths": {
+    "en": "/press/",
+    "ru": "/ru/press/",
+    "zh": "/zh/press/",
+    "ar": "/ar/press/"
+  },
+  "locales": {
+    "en": {
+      "name": "English",
+      "title": "Press & media",
+      "intro": "Company background, official brand assets and media contacts for Edge Ecosystem.",
+      "contact": "For interviews, comments and source requests",
+      "request": "Please include your outlet, topic, format, deadline and publication language.",
+      "email": "Contact for media",
+      "bio": "About Edge Ecosystem",
+      "bioText": "Edge Ecosystem works on CRM, internal portals, integrations and automation. Its work connects business needs with processes, team coordination and implementation. Timothy Ivaikin is the founder.",
+      "topics": "Topics",
+      "topicList": [
+        "Business workflows and automation",
+        "CRM, portals and integrations",
+        "AI with clear responsibilities and verification",
+        "Coordinated delivery across systems and teams"
+      ],
+      "archive": "Founder news and references",
+      "fact": "Official company materials",
+      "photo": "Official logos are available in the brand guide. Photographs and comments can be requested by email.",
+      "downloads": "Company background",
+      "home": "Home",
+      "company": "Timothy Ivaikin’s press room",
+      "archiveNote": "Events, writing and recognition of Edge Ecosystem founder Timothy Ivaikin.",
+      "news": [
+        "Corporate Culture intensive in Moscow",
+        "Recognition from the Nasledie Mira publishing house"
+      ],
+      "newsDeck": [
+        "Participation on 13 November 2026; the organisers introduced Ivaikin as a panel speaker.",
+        "Original diploma and letter of appreciation, with dated context."
+      ],
+      "newsDate": [
+        "Event: 13 Nov 2026 · Release: 14 Nov 2026",
+        "Documents: 7 Oct 2026 · Published: 13 Nov 2026"
+      ],
+      "more": "Read the material",
+      "related": "Services and portfolio",
+      "bioEN": "Biography in English · TXT",
+      "bioRU": "Biography in Russian · TXT",
+      "updated": "Updated 14 November 2026",
+      "brand": "Official brand materials",
+      "releaseLabel": "Press release · issued by Timothy Ivaikin",
+      "eventLabel": "Event date: 13 November 2026",
+      "publishedLabel": "Published 14 November 2026",
+      "back": "Back to press room"
+    },
+    "ru": {
+      "name": "Русский",
+      "title": "Для СМИ",
+      "intro": "Справка об Edge Ecosystem, официальные материалы бренда и контакт для редакций.",
+      "contact": "Интервью, комментарии и запросы источников",
+      "request": "Укажите издание, тему, формат, срок подготовки и язык публикации.",
+      "email": "Связаться по вопросам СМИ",
+      "bio": "Об Edge Ecosystem",
+      "bioText": "Edge Ecosystem работает с CRM, внутренними порталами, интеграциями и автоматизацией. Работа связывает потребности бизнеса, процессы, координацию команды и организацию реализации. Основатель — Тимофей Ивайкин.",
+      "topics": "Темы",
+      "topicList": [
+        "Бизнес-процессы и автоматизация",
+        "CRM, порталы и интеграции",
+        "ИИ с понятной ответственностью и проверкой",
+        "Координация реализации на стыке систем и команд"
+      ],
+      "archive": "Новости и материалы об основателе",
+      "fact": "Официальные материалы компании",
+      "photo": "Официальные логотипы доступны в руководстве по бренду. Фотографии и комментарии можно запросить по email.",
+      "downloads": "Справка о компании",
+      "home": "Главная",
+      "company": "Раздел для СМИ Тимофея Ивайкина",
+      "archiveNote": "События, публикации и признание основателя Edge Ecosystem Тимофея Ивайкина.",
+      "news": [
+        "Участие в интенсиве о корпоративной культуре в Москве",
+        "Признание от издательского дома «Наследие мира»"
+      ],
+      "newsDeck": [
+        "Событие 13 ноября 2026 года; организаторы представили Ивайкина как спикера панели.",
+        "Оригиналы диплома и благодарности с датированным контекстом."
+      ],
+      "newsDate": [
+        "Событие: 13.11.2026 · Релиз: 14.11.2026",
+        "Документы: 07.10.2026 · Публикация: 13.11.2026"
+      ],
+      "more": "Читать материал",
+      "related": "Услуги и портфолио",
+      "bioEN": "О компании на английском · TXT",
+      "bioRU": "О компании на русском · TXT",
+      "updated": "Обновлено 14 ноября 2026",
+      "brand": "Официальные материалы бренда",
+      "releaseLabel": "Пресс-релиз от имени Тимофея Ивайкина",
+      "eventLabel": "Дата события: 13 ноября 2026",
+      "publishedLabel": "Опубликовано 14 ноября 2026",
+      "back": "Вернуться в раздел для СМИ"
+    },
+    "zh": {
+      "name": "中文",
+      "title": "媒体资料",
+      "intro": "Edge Ecosystem 公司简介、官方品牌素材及媒体联系信息。",
+      "contact": "采访、评论与资料查询",
+      "request": "请注明媒体名称、主题、形式、截止时间和发布语言。",
+      "email": "媒体联系",
+      "bio": "关于 Edge Ecosystem",
+      "bioText": "Edge Ecosystem 从事 CRM、内部门户、系统集成和自动化工作，将企业需求、流程、团队协调与实施联系起来。创始人为 Timothy Ivaikin。",
+      "topics": "话题",
+      "topicList": [
+        "企业流程与自动化",
+        "CRM、门户与系统集成",
+        "具有明确责任和验证机制的人工智能",
+        "跨系统与团队的协调交付"
+      ],
+      "archive": "创始人动态与资料",
+      "fact": "官方公司资料",
+      "photo": "官方标志见品牌指南；照片与评论可通过电子邮件索取。",
+      "downloads": "公司简介",
+      "home": "首页",
+      "company": "Timothy Ivaikin 媒体资料 · 英文",
+      "archiveNote": "Edge Ecosystem 创始人 Timothy Ivaikin 的活动、作品与个人表彰。完整材料提供英文和俄文版本。",
+      "news": [
+        "参加莫斯科企业文化活动 · 英文",
+        "获 Nasledie Mira 出版机构表彰 · 英文"
+      ],
+      "newsDeck": [
+        "活动日期为 2026 年 11 月 13 日。",
+        "证书及感谢信原件。"
+      ],
+      "newsDate": [
+        "活动：2026.11.13 · 发布：2026.11.14",
+        "文件：2026.10.07 · 发布：2026.11.13"
+      ],
+      "more": "阅读资料",
+      "related": "服务与项目",
+      "bioEN": "英文简介 · TXT",
+      "bioRU": "俄文简介 · TXT",
+      "updated": "更新于 2026 年 11 月 14 日",
+      "brand": "官方品牌资料"
+    },
+    "ar": {
+      "name": "العربية",
+      "title": "للصحافة والإعلام",
+      "intro": "نبذة عن Edge Ecosystem ومواد الهوية الرسمية ووسيلة التواصل مع وسائل الإعلام.",
+      "contact": "المقابلات والتعليقات وطلبات المصادر",
+      "request": "يرجى ذكر اسم الوسيلة والموضوع والصيغة والموعد النهائي ولغة النشر.",
+      "email": "التواصل الإعلامي",
+      "bio": "نبذة عن Edge Ecosystem",
+      "bioText": "تعمل Edge Ecosystem في أنظمة إدارة علاقات العملاء والبوابات الداخلية والتكامل والأتمتة. يربط عملها احتياجات الأعمال بالعمليات وتنسيق الفرق والتنفيذ. مؤسسها هو Timothy Ivaikin.",
+      "topics": "موضوعات للنقاش",
+      "topicList": [
+        "عمليات الأعمال والأتمتة",
+        "أنظمة إدارة العملاء والبوابات والتكامل",
+        "الذكاء الاصطناعي مع مسؤولية وتحقق واضحين",
+        "تنسيق التنفيذ بين الأنظمة والفرق"
+      ],
+      "archive": "أخبار المؤسس ومواد مرجعية",
+      "fact": "مواد رسمية عن الشركة",
+      "photo": "تتوفر الشعارات الرسمية في دليل الهوية. يمكن طلب الصور والتعليقات عبر البريد الإلكتروني.",
+      "downloads": "تحميل نبذة الشركة",
+      "home": "الرئيسية",
+      "company": "المواد الإعلامية لـ Timothy Ivaikin · بالإنجليزية",
+      "archiveNote": "فعاليات المؤسس Timothy Ivaikin وكتاباته وتكريمه الشخصي. المواد الكاملة بالإنجليزية والروسية.",
+      "news": [
+        "مشاركة المؤسس في لقاء عن ثقافة الشركة · بالإنجليزية",
+        "تكريم من دار نشر Nasledie Mira · بالإنجليزية"
+      ],
+      "newsDeck": [
+        "أقيم اللقاء في 13 نوفمبر 2026.",
+        "صور أصلية للشهادة ورسالة الشكر."
+      ],
+      "newsDate": [
+        "اللقاء: 13.11.2026 · النشر: 14.11.2026",
+        "الوثائق: 07.10.2026 · النشر: 13.11.2026"
+      ],
+      "more": "قراءة المادة",
+      "related": "الخدمات والمشاريع",
+      "bioEN": "نبذة بالإنجليزية · TXT",
+      "bioRU": "نبذة بالروسية · TXT",
+      "updated": "آخر تحديث: 14 نوفمبر 2026",
+      "brand": "مواد الهوية الرسمية"
+    }
+  },
+  "styles": [
+    "/assets/press/press.css"
+  ],
+  "logo": "/assets/brand/edge-logo-gold-header.svg",
+  "archiveURLs": [
+    "https://ivaikin.com/press/corporate-culture-2026-11-13/",
+    "https://ivaikin.com/en/recognition/nasledie-mira-2026/"
+  ],
+  "archiveURLsRU": [
+    "https://ivaikin.com/ru/press/corporate-culture-2026-11-13/",
+    "https://ivaikin.com/ru/recognition/nasledie-mira-2026/"
+  ],
+  "downloadPrefix": "company-background",
+  "articles": {}
+}

@@ -100,6 +100,8 @@ If you add anything that could slow down:
 - `partners/brand/index.html`, `ru/partners/brand/index.html` — EN/RU partner brand guide
 - `assets/partners.js`, `assets/partners.css` — bounded partner intake and page styles
 - `assets/brand/` — approved Edge logo files used by the brand guide
+- `press/index.html`, `ru/press/index.html`, `zh/press/index.html`, `ar/press/index.html` — localized press rooms
+- `content/press.json`, `scripts/build-press.mjs`, `assets/press/` — press content, generator and downloads
 - `llms.txt` — public summary of the company and key pages
 - `ru/automation-ai/index.html` — RU evergreen automation/AI lead page
 - `automation-ai/index.html` — redirect to `/ru/automation-ai/` (the page is Russian-only)
