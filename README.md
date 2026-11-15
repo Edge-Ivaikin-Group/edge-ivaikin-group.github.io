@@ -10,6 +10,7 @@ This repository hosts the public website for **Edge Ecosystem** (high-tech landi
 - `/` - English (default)
 - `/ru/` - Russian
 - `/ru/automation-ai/` - permanent Russian automation/AI page with contact handoff and short PDF
+- `/ru/anticrisis/` - Russian operational and project recovery service, scoped paid diagnostic and email/Telegram contact
 - `/automation-ai/` - redirect to that Russian page (there is no separate English page)
 - `/ru/insights/team-rhythm/` - practical article and copyable team-agreement template, linked to the diagnostic service
 - `/zh/` - Chinese (Simplified)
@@ -131,3 +132,7 @@ Run `node scripts/build-press.mjs` after changing `content/press.json`. `/press/
 ## Project portfolio
 
 The case pages replace the three short cards on the homepages. They reuse the public CRM and regulatory-platform descriptions, the Discover Culture launch and event references, and the published EdgeFocus and partner flows. The new entries describe specific technical roles and deliverables, with dates and reported figures attributed to the sources they describe. The Discover Culture entry follows Timothy Ivaikin’s confirmation that he did the work through Enlightened Ventures LLC-FZ in Dubai. The four pages share case IDs and reciprocal language links.
+
+## Operational and project recovery — 15 November 2026
+
+The Russian `/ru/anticrisis/` service page adapts the existing automation page's design, public founder identity, contact routes and paid diagnostic model. New editorial material describes stalled delivery, owner-dependent operations, the handoff from sale to acceptance, diagnostic outputs and separately agreed implementation. The portfolio and team-rhythm article remain the evidence and practice references. The page adds no turnaround-performance, corporate-history or client claim and does not replace existing services or agreements. Price and duration are scoped individually; the initial conversation is limited to 20 minutes. Email opens a draft and Telegram opens the existing contact, so neither click is represented as a submitted request. No new tracking or client-side data collection is added. This service is Russian-only, with Russian and x-default metadata; existing localized homepages retain their language links.
