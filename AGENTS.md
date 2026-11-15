@@ -107,6 +107,7 @@ If you add anything that could slow down:
 - `ru/anticrisis/index.html`, `ru/anticrisis/styles.css` — RU operational/project recovery service and scoped paid diagnostic
 - `automation-ai/index.html` — redirect to `/ru/automation-ai/` (the page is Russian-only)
 - `ru/insights/team-rhythm/index.html` — RU practical article based on the founder's authored video
+- `ru/insights/stalled-project/index.html` — RU owner checklist for a stalled digital project, linked to the diagnostic
 - `zh/index.html` — ZH landing
 - `ar/index.html` — AR landing (RTL)
 - `cases/index.html`, `ru/cases/index.html`, `zh/cases/index.html`, `ar/cases/index.html` — project portfolio
