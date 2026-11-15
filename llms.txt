@@ -25,6 +25,7 @@ Partnership terms are agreed individually. The partner pages state that no stand
 - [Automation and AI (RU)](https://edgeivaikin.com/ru/automation-ai/)
 - [Антикризисное управление (RU)](https://edgeivaikin.com/ru/anticrisis/): operational and project recovery, scoped paid diagnostic and direct contact
 - [Team rhythm (RU)](https://edgeivaikin.com/ru/insights/team-rhythm/)
+- [Цифровой проект застрял (RU)](https://edgeivaikin.com/ru/insights/stalled-project/): пять вопросов собственника для проверки результата, зависимостей и приёмки; ссылка на диагностику
 
 ## Contact
 

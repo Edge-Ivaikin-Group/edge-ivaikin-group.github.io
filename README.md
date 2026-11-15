@@ -13,6 +13,7 @@ This repository hosts the public website for **Edge Ecosystem** (high-tech landi
 - `/ru/anticrisis/` - Russian operational and project recovery service, scoped paid diagnostic and email/Telegram contact
 - `/automation-ai/` - redirect to that Russian page (there is no separate English page)
 - `/ru/insights/team-rhythm/` - practical article and copyable team-agreement template, linked to the diagnostic service
+- `/ru/insights/stalled-project/` - practical owner checklist for a stalled digital project, linked to the paid diagnostic
 - `/zh/` - Chinese (Simplified)
 - `/ar/` - Arabic (RTL)
 - `/partners/` and `/ru/partners/` - partner invitation and application
@@ -136,3 +137,5 @@ The case pages replace the three short cards on the homepages. They reuse the pu
 ## Operational and project recovery — 15 November 2026
 
 The Russian `/ru/anticrisis/` service page adapts the existing automation page's design, public founder identity, contact routes and paid diagnostic model. New editorial material describes stalled delivery, owner-dependent operations, the handoff from sale to acceptance, diagnostic outputs and separately agreed implementation. The portfolio and team-rhythm article remain the evidence and practice references. The page adds no turnaround-performance, corporate-history or client claim and does not replace existing services or agreements. Price and duration are scoped individually; the initial conversation is limited to 20 minutes. Email opens a draft and Telegram opens the existing contact, so neither click is represented as a submitted request. No new tracking or client-side data collection is added. This service is Russian-only, with Russian and x-default metadata; existing localized homepages retain their language links.
+
+The 15 November editorial article `/ru/insights/stalled-project/` provides five checkable questions and a clearly fictional handoff example. It adds no client identity, performance or financial claims. Its CTA routes to the existing paid diagnostic; reciprocal links appear on the diagnostic and team-rhythm pages. Publication is not evidence of traffic, lead, or payment.
