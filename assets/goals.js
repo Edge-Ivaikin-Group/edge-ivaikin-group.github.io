@@ -4,9 +4,25 @@
 (function () {
   var COUNTER_ID = 108284737;
 
+  // Funnel pages (/ladder/, /ru/ladder/) set window.edgeFunnelEntry = "funnel_page" before this script,
+  // so their goals can be told apart from existing-page traffic. Other pages send exactly what they sent before.
   function send(goal) {
+    var params = null;
     try {
-      if (typeof window.ym === "function") window.ym(COUNTER_ID, "reachGoal", goal);
+      if (window.edgeFunnelEntry) params = { entry: String(window.edgeFunnelEntry) };
+    } catch (e) {}
+    try {
+      if (typeof window.ym === "function") {
+        if (params) window.ym(COUNTER_ID, "reachGoal", goal, params);
+        else window.ym(COUNTER_ID, "reachGoal", goal);
+      }
+    } catch (e) {}
+    // GA4 bridge: the pages load GA4 through Google Tag Manager, so the event goes to dataLayer
+    // and GTM forwards it (Custom Event trigger on ^(cta_|form_submit|pdf_download)). No gtag on these pages.
+    try {
+      var item = { event: goal };
+      if (params) item.entry = params.entry;
+      (window.dataLayer = window.dataLayer || []).push(item);
     } catch (e) {}
   }
 

@@ -89,11 +89,19 @@
   function send(id, extra) {
     if (seen(id)) return false;
     remember(id);
+    var params = null;
     try {
-      if (typeof window.ym !== "function") return true;
-      var params = { lang: lang(), ab_hero: window.edgeAbHero || "none", page: window.location.pathname };
+      params = { lang: lang(), ab_hero: window.edgeAbHero || "none", page: window.location.pathname };
       if (extra) for (var k in extra) if (Object.prototype.hasOwnProperty.call(extra, k)) params[k] = extra[k];
-      window.ym(COUNTER_ID, "reachGoal", id, params);
+    } catch (e) {}
+    try {
+      if (params && typeof window.ym === "function") window.ym(COUNTER_ID, "reachGoal", id, params);
+    } catch (e) {}
+    // GA4 bridge: GA4 is loaded through Google Tag Manager on these pages, so the event also goes to dataLayer.
+    try {
+      var item = { event: id };
+      if (params) for (var p in params) if (Object.prototype.hasOwnProperty.call(params, p)) item[p] = params[p];
+      (window.dataLayer = window.dataLayer || []).push(item);
     } catch (e) {}
     return true;
   }
