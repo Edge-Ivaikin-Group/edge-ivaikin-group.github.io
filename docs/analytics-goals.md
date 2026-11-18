@@ -20,3 +20,10 @@ No markup, text or design is changed. The older `data-goal` goals from `assets/a
 Create each goal in Metrika as a "JavaScript event" with the identifier equal to the goal id.
 
 Rollback: `git revert <commit>` of the single E1 commit; GitHub Pages updates in 1-5 minutes.
+
+## E2: hero button test (`/` and `/ru/`)
+
+`assets/ab-hero.js` splits visitors 50/50 and stores the variant in `localStorage` (`edge_ab_hero`).
+A = current button to `#contact`. B = "Book a 20-minute call" / "Выбрать время для 20-минутного разговора" straight to the calendar link (B clicks also fire `cta_calendar`).
+Metrika: visit parameter `ab_hero` = `A` or `B` (`forced_A` / `forced_B` while the flag is set), and goal `hero_cta` (JavaScript event, create it in Metrika) with the same parameter on a click of the first-screen primary button.
+Rollback to A for everyone: in `assets/ab-hero.js` set `var FORCE = "A";` (or revert the E2 commit).
