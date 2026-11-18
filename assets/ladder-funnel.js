@@ -70,6 +70,58 @@
     }
   }
 
+  // Campaign context for story / share / campaign traffic. Only the five utm_* keys, values limited to a safe
+  // character set and 64 characters, so no visitor input and no free text can pass. The first funnel page of the
+  // visit stores them for the next steps (links between steps drop the query string).
+  var UTM_KEYS = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"];
+  var UTM_STORE_KEY = "edge_ladder_utm_v1";
+  var UTM_VALUE = /^[A-Za-z0-9_.\-]{1,64}$/;
+
+  function readUtm() {
+    var out = {};
+    var any = false;
+    try {
+      var search = window.location.search || "";
+      if (search) {
+        var parts = search.replace(/^\?/, "").split("&");
+        for (var i = 0; i < parts.length; i++) {
+          var kv = parts[i].split("=");
+          var key = kv[0];
+          if (UTM_KEYS.indexOf(key) === -1) continue;
+          var val = "";
+          try { val = decodeURIComponent((kv[1] || "").replace(/\+/g, " ")); } catch (e) { val = ""; }
+          if (UTM_VALUE.test(val)) { out[key] = val; any = true; }
+        }
+      }
+    } catch (e) {}
+    if (any) {
+      try { window.sessionStorage.setItem(UTM_STORE_KEY, JSON.stringify(out)); } catch (e) {}
+      return out;
+    }
+    try {
+      var raw = window.sessionStorage.getItem(UTM_STORE_KEY);
+      var saved = raw ? JSON.parse(raw) : null;
+      if (saved && typeof saved === "object") {
+        var clean = {};
+        for (var j = 0; j < UTM_KEYS.length; j++) {
+          var v = saved[UTM_KEYS[j]];
+          if (typeof v === "string" && UTM_VALUE.test(v)) clean[UTM_KEYS[j]] = v;
+        }
+        return clean;
+      }
+    } catch (e) {}
+    return {};
+  }
+
+  // Context added to every funnel event and to the cta_* goals (assets/goals.js reads window.edgeFunnelCtx).
+  // ab_cro is the CRO bundle variant ("a" control, "b" test); the inline head script sets window.edgeFunnelAB.
+  function ctx() {
+    var out = readUtm();
+    try { if (window.edgeFunnelAB === "a" || window.edgeFunnelAB === "b") out.ab_cro = window.edgeFunnelAB; } catch (e) {}
+    return out;
+  }
+  window.edgeFunnelCtx = ctx;
+
   function send(id, extra) {
     if (seen(id)) return false;
     remember(id);
@@ -77,6 +129,8 @@
     try {
       params = { lang: lang(), ab_hero: "none", page: window.location.pathname, entry: ENTRY, funnel_step: step };
       if (extra) for (var k in extra) if (Object.prototype.hasOwnProperty.call(extra, k)) params[k] = extra[k];
+      var c = ctx();
+      for (var ck in c) if (Object.prototype.hasOwnProperty.call(c, ck)) params[ck] = c[ck];
     } catch (e) {}
     try {
       if (params && typeof window.ym === "function") window.ym(COUNTER_ID, "reachGoal", id, params);
@@ -87,6 +141,26 @@
       (window.dataLayer = window.dataLayer || []).push(item);
     } catch (e) {}
     return true;
+  }
+
+  // Telegram share link of the checklist (t.me/share/url). It is a share, not a contact: no intent, no conversion.
+  function isShareLink(a) {
+    try {
+      var url = new URL(a.getAttribute("href") || "", window.location.href);
+      var host = url.hostname.toLowerCase().replace(/^www\./, "");
+      return (host === "t.me" || host === "telegram.me") && (url.pathname.toLowerCase().split("/")[1] || "") === "share";
+    } catch (e) { return false; }
+  }
+
+  // CRO variant B: the Telegram button opens the chat with the three brief points already typed in.
+  function applyPrefill() {
+    if (window.edgeFunnelAB !== "b" || typeof document.querySelectorAll !== "function") return;
+    var links = document.querySelectorAll("a[data-prefill]");
+    for (var i = 0; i < links.length; i++) {
+      var text = links[i].getAttribute("data-prefill");
+      var href = links[i].getAttribute("href") || "";
+      if (text && href && href.indexOf("?") === -1) links[i].setAttribute("href", href + "?text=" + encodeURIComponent(text));
+    }
   }
 
   // Same link classes as assets/ladder.js (a test keeps them identical).
@@ -198,6 +272,7 @@
       var contact = document.querySelector("#contact");
       if (step === 7 && contact) watch(contact, function () { send("ladder_aux_contact_view", { section: "contact" }); });
     });
+    guarded(applyPrefill);
     guarded(watchScroll);
     guarded(watchTime);
 
@@ -207,6 +282,7 @@
           var t = e.target;
           var a = t && t.closest ? t.closest("a[href]") : null;
           if (!a) return;
+          if (isShareLink(a)) { send("ladder_aux_share"); return; }
           var channel = channelForLink(a);
           if (channel) { conversion(channel); return; }
           if (a.hasAttribute("data-ladder-contact")) intent("contact_step");

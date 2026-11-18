@@ -23,3 +23,19 @@
   .funnel .funnel-step h1 { max-width: none; }
   .funnel .funnel-next .btn { width: 100%; }
 }
+
+/* v2: answer blocks for search and AI engines, share, and the CRO bundle (variant B = html.fab-b). */
+.funnel .answer-section { padding-block: 8px 24px; }
+.funnel .answer { max-width: 70ch; border-inline-start: 3px solid var(--action); padding-inline-start: 18px; }
+.funnel .answer h2 { font-size: 18px; margin: 0 0 8px; }
+.funnel .answer p { color: var(--muted); line-height: 1.6; margin: 0; }
+.funnel .share { margin-block: 18px 0; }
+.funnel .hero-cta, .funnel .sticky-cta { display: none; }
+html.fab-b .funnel .hero-cta { display: block; margin-block: 0 22px; }
+html.fab-b .funnel .opt-extra { display: none; }
+@media (max-width: 720px) {
+  html.fab-b .funnel .sticky-cta { display: flex; position: fixed; inset-inline: 0; bottom: 0; z-index: 50; padding: 10px 14px calc(10px + env(safe-area-inset-bottom)); background: rgba(5, 6, 10, .94); border-block-start: 1px solid var(--stroke); }
+  html.fab-b .funnel .sticky-cta .btn { flex: 1; text-align: center; min-height: 48px; }
+  html.fab-b .funnel .hero-cta .btn { width: 100%; text-align: center; }
+  html.fab-b body.funnel { padding-block-end: 84px; }
+}

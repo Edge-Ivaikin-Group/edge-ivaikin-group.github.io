@@ -9,7 +9,12 @@
   function send(goal) {
     var params = null;
     try {
-      if (window.edgeFunnelEntry) params = { entry: String(window.edgeFunnelEntry) };
+      if (window.edgeFunnelEntry) {
+        params = { entry: String(window.edgeFunnelEntry) };
+        // Campaign context (utm_* and the CRO variant) comes from assets/ladder-funnel.js on funnel pages only.
+        var c = typeof window.edgeFunnelCtx === "function" ? window.edgeFunnelCtx() : null;
+        if (c) for (var k in c) if (Object.prototype.hasOwnProperty.call(c, k)) params[k] = c[k];
+      }
     } catch (e) {}
     try {
       if (typeof window.ym === "function") {
@@ -21,7 +26,7 @@
     // and GTM forwards it (Custom Event trigger on ^(cta_|form_submit|pdf_download)). No gtag on these pages.
     try {
       var item = { event: goal };
-      if (params) item.entry = params.entry;
+      if (params) for (var p in params) if (Object.prototype.hasOwnProperty.call(params, p)) item[p] = params[p];
       (window.dataLayer = window.dataLayer || []).push(item);
     } catch (e) {}
   }
@@ -46,6 +51,7 @@
     if (host === "linkedin.com" || host.slice(-13) === ".linkedin.com") return "cta_linkedin";
     if (host === "t.me" || host === "telegram.me") {
       var first = path.split("/")[1] || "";
+      if (first === "share") return "cta_share";
       if (first === "timothy_ivaikin_ru" || first === "joinchat" || first.charAt(0) === "+" || raw.indexOf("t.me/+") !== -1) return "cta_channel";
       if (/bot$/.test(first)) return "cta_bot";
       return "cta_telegram";
