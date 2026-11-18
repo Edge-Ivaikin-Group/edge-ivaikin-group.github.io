@@ -132,7 +132,7 @@ Run `node scripts/build-press.mjs` after changing `content/press.json`. `/press/
 
 ## Project portfolio
 
-The case pages replace the three short cards on the homepages. They reuse the public CRM and regulatory-platform descriptions, the Discover Culture launch and event references, and the published EdgeFocus and partner flows. The new entries describe specific technical roles and deliverables, with dates and reported figures attributed to the sources they describe. The Discover Culture entry follows Timothy Ivaikin’s confirmation that he did the work through Enlightened Ventures LLC-FZ in Dubai. The four pages share case IDs and reciprocal language links.
+The case pages replace the three short cards on the homepages. They reuse the public CRM and regulatory-platform descriptions, the Discover Culture launch and event references, and the published EdgeFocus and partner flows. The new entries describe specific technical roles and deliverables, with dates and reported figures attributed to the sources they describe. The Discover Culture entry follows Timothy Ivaikin’s confirmation that he did the work through Enlightened Ventures LLC-FZ. The four pages share case IDs and reciprocal language links.
 
 ## Operational and project recovery — 15 November 2026
 

@@ -76,7 +76,7 @@
           <p class="case-credit">Enlightened Ventures LLC-FZ · Timothy Ivaikin，技术负责人</p>
           <dl>
             <dt>项目背景</dt><dd>文化部需要一个统一入口，供公众查找文化活动并预订门票。</dd>
-            <dt>交付内容</dt><dd>Timothy Ivaikin 担任技术负责人，通过他在迪拜创立的 Enlightened Ventures LLC-FZ 参与合作伙伴主导的交付。</dd>
+            <dt>交付内容</dt><dd>Timothy Ivaikin 担任技术负责人，通过他创立的 Enlightened Ventures LLC-FZ 参与合作伙伴主导的交付。</dd>
             <dt>结果</dt><dd>文化部于 2023 年 11 月 23 日宣布推出测试版。该平台为利雅得 Bienalsur 展览提供票务，并用于 2024 年麦地那书展的报名。</dd>
           </dl>
           <div class="case-links"><a class="case-link" href="https://www.spa.gov.sa/en/N2002647">测试版发布</a><a class="case-link" href="https://www.arabnews.com/saudi-arabia/1st-contemporary-art-museum-inaugurated-in-riyadh-with-argentinian-bienalsur-show-2402716">Bienalsur 展览票务</a><a class="case-link" href="https://www.spa.gov.sa/en/N2145593">麦地那书展</a></div>
@@ -131,19 +131,19 @@
           <h3>Infijoy 课程平台</h3>
           <p class="case-credit">Infijoy · Timothy Ivaikin，首席技术官 · 管理经验，非 Edge 合同</p>
           <dl>
-            <dt>项目背景</dt><dd>一款面向国际用户的心理学与自我成长产品，需要网页和移动端课程平台：注册、个人账户、课程与课时、活动、订阅、支付和企业账户。</dd>
-            <dt>交付内容</dt><dd>技术规格书用 29 条用户故事描述平台：邮箱注册、Google 和 Facebook 登录、找回密码、新手引导、带计划的课程、冥想、笔记和待办、带通知的活动日历、收藏、文章、FAQ、个人资料、购买订阅或单门课程、受邀加入企业账户。规格书列明的环境：Windows 10、macOS Big Sur、iOS 15、Android 10 及主流浏览器。</dd>
-            <dt>架构</dt><dd>2022 年 7 月的平台概览显示：微服务（网关、内容、客户、计费、搜索），Kafka 和 Elasticsearch，基于 Node.js（Fastify）的服务，GraphQL 与 Apollo Router，运行在 AWS 上的 Kubernetes（OpenShift）集群，相互独立的 test、staging、pre-prod 和 prod 环境，以及 New Relic 监控。每日报告还提到用于部署的 Argo CD、Bugsnag、Mixpanel、用于翻译的 Lokalise、Stripe 和 PayPal 支付、Voucherify 优惠码、Zoho 邮件和 Amazon Cognito 登录。</dd>
-            <dt>交付管理方式</dt><dd>Timothy 是客户方的技术负责人：梳理需求，向团队提供 API 方法、授权参数和支付系统权限，并对有争议的问题作决定。工作通过按角色的每日报告推进：昨天做了什么、今天做什么、阻碍是什么。2022 年的报告显示外部团队 22 人（分析师、设计师、iOS、Android、QA、项目经理；1 月至 5 月），Web 团队 16 人（后端、前端、DevOps、QA；3 月至 10 月，共 138 份日报）。变更在发布前先在独立环境中通过测试和回归检查。Timothy 在 2023 年的简历中列出了引入 ITIL v4 实践。</dd>
-            <dt>结果</dt><dd>2022 年 7 月，团队演示了该产品。目前 Infijoy 的公开订阅页面（2026 年 11 月）列出 37 门课程、1,000 多节视频课、100 多个冥想练习和 28 位讲师。讲师所属机构包括哥伦比亚大学、宾夕法尼亚大学（Penn Positive Psychology Center）、奥克兰大学和不列颠哥伦比亚大学。目前的展示站点运行在另一个平台上，因此我们不把其数字归于 2021–2023 年的工作。</dd>
-            <dt>对客户意味着什么</dt><dd>如果您需要订阅类产品或课程平台：可以对照用户故事核对的范围、发布前的独立环境、支付集成，以及按角色的每日汇报。可以从一次简短的沟通开始，谈谈您的任务。</dd>
+            <dt>背景与风险</dt><dd>Infijoy 是一款面向国际用户的心理学与自我成长产品，当时正在搭建覆盖网页、iOS 和 Android 的课程平台：注册、个人账户、课程与课时、活动、订阅、支付和企业账户（技术规格书中有 29 条用户故事）。风险是实实在在的：工作同时在多个团队中展开（2022 年 1 月至 5 月的外部团队 22 人，以及约 25 人的 Web 团队），支付涉及多种货币和两大应用商店，2022 年 7 月还要演示产品。这类项目的主要风险不在代码，而在失步：团队互相等待，问题到发布时才暴露。</dd>
+            <dt>Timothy 做了什么</dt><dd>Timothy 是客户方的技术负责人：梳理需求，向团队提供 API 方法、授权参数和支付系统权限，并对有争议的问题作决定。报告中可以看到他的角色体现在具体的请求上：批准监控方案（2022 年 3 月 15 日）、回答后端的问题（2022 年 4 月 25 日）、为 Play Market 提供 Google 支付权限（2022 年 7 月 20 日）。这三项都在下一份报告中从阻塞项里消失。</dd>
+            <dt>交付是如何管理的</dt><dd>每个工作日，每个角色提交一份简短报告：昨天做了什么、今天做什么、有什么阻碍。报告按角色（后端、前端、DevOps、QA）划分，7 月起按业务方向（支付、客户端、课程、小组）划分。报告中的人数从 3 月的 11 人增长到 2022 年 8 月的 23 人。变更先经过相互独立的环境（test 或 stage、pre-prod、prod），QA 负责回归测试。Timothy 在 2023 年的简历中列出了引入 ITIL v4 实践；我们的资料中没有相关日志或 SLA。</dd>
+            <dt>客户关心的结果</dt><dd class="case-dd-wide"><p class="case-metrics-lead">我们只统计报告中写明的内容。数字涵盖 2022 年 3 月 24 日至 10 月 14 日共 137 个工作日，逐行阅读得出。</p><ul class="case-metrics"><li><strong>137 / 147</strong><span>在 2022 年 3 月 24 日至 10 月 14 日之间，有 137 个工作日留有每日报告（93%）。档案中共有 268 个报告日，最早自 2021 年 8 月 27 日起。</span></li><li><strong>64 个阻塞项</strong><span>在报告中被提出。消除的中位时间为 1 个工作日；64 个中有 56 个（88%）在下一份报告中消失；最久的一个持续 5 天，以更换分析工具告终。</span></li><li><strong>92 条发布记录</strong><span>出现在 137 份报告中的 64 份里，其中至少 19 条发布到 prod，24 条到 pre-prod，19 条到 stage；其余未注明环境。这是下限。</span></li><li><strong>46 / 64</strong><span>份 QA 报告（7 月 14 日至 10 月 14 日）记录了回归检查，覆盖至少 15 个产品领域，从支付、注册到博客和后台。</span></li><li><strong>11 项集成</strong><span>在报告中有日期记录：PayPal（服务 7 月 21 日，9 月 23 日前上线 prod）、Stripe、App Store 和 Google Play（7 至 8 月）、Zoho（自 9 月 5 日）、Braze、Mixpanel（6 月 2 日）、New Relic、Cognito、Lokalise、Argo CD。</span></li><li><strong>3 次请求</strong><span>报告中可见针对客户方技术负责人的请求（监控方案 3 月 15 日、后端问题 4 月 25 日、Google 支付权限 7 月 20 日）；每一项都在下一份报告中从阻塞项里消失。</span></li></ul></dd>
+            <dt>背景：现状</dt><dd>Infijoy 公开订阅页面（2026 年 11 月）列出 37 门课程、1,000 多节视频课、100 多个冥想练习和 28 位讲师。讲师所属机构（哥伦比亚大学、宾夕法尼亚大学、奥克兰大学、不列颠哥伦比亚大学）只是讲师任职或授课的单位，并非 Infijoy 或 Edge 的合作关系。目前的展示站点运行在另一个平台上，因此我们不把其数字归于 2021–2023 年的工作。</dd>
+            <dt>对客户意味着什么</dt><dd>如果您需要订阅类产品或课程平台，这个案例带来三点可以核实的内容。第一：您每个工作日都能按角色看到进展，而不只是在演示时。第二：问题在报告里停留一两天，而不是几周；这里的中位数是 1 个工作日。第三：变更经由相互独立的环境和 QA 回归才到达 prod。同样的节奏也可以在您的项目中建立。可以从一次简短的沟通开始，谈谈您的任务。</dd>
           </dl>
           <div class="case-figure-grid">
             <figure class="case-evidence"><img src="/assets/cases/art/infijoy-architecture-600.webp" srcset="/assets/cases/art/infijoy-architecture-600.webp 600w, /assets/cases/art/infijoy-architecture.webp 1000w" sizes="(max-width: 700px) 85vw, 280px" width="1000" height="667" alt="三级台阶平台上的四个玻璃服务方块，分别代表测试、预发布和生产环境" loading="lazy" decoding="async"><figcaption>插图：相互独立的环境（test、staging、prod）</figcaption></figure>
             <figure class="case-evidence"><img src="/assets/cases/art/contractors-600.webp" srcset="/assets/cases/art/contractors-600.webp 600w, /assets/cases/art/contractors.webp 1000w" sizes="(max-width: 700px) 85vw, 280px" width="1000" height="667" alt="中央玻璃枢纽通过金色线条连接日历、清单和齿轮等独立平台" loading="lazy" decoding="async"><figcaption>插图：按角色的每日汇报</figcaption></figure>
             <figure class="case-evidence"><a href="/assets/cases/art/infijoy-public-page.webp"><img src="/assets/cases/art/infijoy-public-page-600.webp" srcset="/assets/cases/art/infijoy-public-page-600.webp 600w, /assets/cases/art/infijoy-public-page.webp 1280w" sizes="(max-width: 700px) 85vw, 280px" width="1280" height="900" alt="Infijoy 公开订阅页面截图：标题、订阅价格和课程数量" loading="lazy" decoding="async"></a><figcaption>Infijoy 公开订阅页面，2026 年 11 月（截图）</figcaption></figure>
           </div>
-          <p class="case-evidence-note">来源：Infijoy 技术规格书、2022 年 7 月平台概览、2022 年每日报告和 Infijoy 公开页面。我们不公开客户文件。这是在客户团队内的管理经验，不是 Edge 的合同。</p>
+          <p class="case-evidence-note">方法：我们只统计 2022 年每日报告中写明的内容。阻塞项从报告中消失即视为已消除（这是估算，不是任务日志）。发布按明确记录统计，因此数字是下限。日期为报告日期。如需，我们可以展示统计方法。我们不公开客户文件和执行人员姓名。这是在客户团队内的管理经验，不是 Edge 的合同。</p>
           <div class="case-links"><a class="case-link" href="https://www.infijoy.com/store">课程目录</a> <a class="case-link" href="https://www.infijoy.com/membership">Infijoy 订阅页面</a></div>
           <div class="case-links case-cta"><a class="case-link" href="https://t.me/TimothyIvaikin" target="_blank" rel="noopener">在 Telegram 上讨论您的任务</a> <a class="case-link" href="https://calendar.app.google/4aFN841D87V6or7q9" target="_blank" rel="noopener">选择沟通时间</a></div>
         </article>
