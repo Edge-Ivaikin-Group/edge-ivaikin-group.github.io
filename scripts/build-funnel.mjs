@@ -148,16 +148,16 @@ const C = {
       lead: 'A short message is enough to start. Include these three points.',
       body: `<ol class="brief-prompts"><li>What is slowing the team down?</li><li>Which systems and people are involved?</li><li>What result do you need, and by when?</li></ol>
       <div class="cta contact-primary">
-        <a class="btn primary" href="${TELEGRAM}" target="_blank" rel="noopener">Message us on Telegram</a>
+        <a class="btn primary" href="${TELEGRAM}" target="_blank" rel="noopener" data-prefill="PREFILL">Message us on Telegram</a>
         <a class="btn" href="MAILTO">Email a short brief</a>
       </div>
       <p class="handoff-note">Opens a Telegram chat. Just send the 3 points above.</p>
       <p class="contact-alternative">Prefer a conversation?</p>
       <div class="cta contact-secondary">
         <a class="btn" href="${CALENDAR}" target="_blank" rel="noopener">Choose a time to talk</a>
-        <a class="btn" href="${BOT}" target="_blank" rel="noopener">Telegram bot</a>
-        <a class="btn" href="mailto:hello@edgeivaikin.com">hello@edgeivaikin.com</a>
-        <a class="btn" href="${PHONE_HREF}">${PHONE}</a>
+        <a class="btn opt-extra" href="${BOT}" target="_blank" rel="noopener">Telegram bot</a>
+        <a class="btn opt-extra" href="mailto:hello@edgeivaikin.com">hello@edgeivaikin.com</a>
+        <a class="btn opt-extra" href="${PHONE_HREF}">${PHONE}</a>
       </div>
       <p class="hero-note">For enterprise and public-sector partners: detailed references are available under NDA. Office: Moscow City, Federation Tower East, 35th floor.</p>`,
     },
@@ -261,21 +261,128 @@ const C = {
       lead: 'Для начала достаточно короткого сообщения. Укажите три вещи.',
       body: `<ol class="brief-prompts"><li>Что сейчас тормозит работу?</li><li>Какие системы и люди участвуют?</li><li>Какой результат нужен и к какому сроку?</li></ol>
       <div class="cta contact-primary">
-        <a class="btn primary" href="${TELEGRAM}" target="_blank" rel="noopener">Написать в Telegram</a>
+        <a class="btn primary" href="${TELEGRAM}" target="_blank" rel="noopener" data-prefill="PREFILL">Написать в Telegram</a>
         <a class="btn" href="MAILTO">Описать задачу по почте</a>
       </div>
       <p class="handoff-note">Откроется чат в Telegram. Можно сразу написать 3 пункта выше.</p>
       <p class="contact-alternative">Удобнее поговорить?</p>
       <div class="cta contact-secondary">
         <a class="btn" href="${CALENDAR}" target="_blank" rel="noopener">Выбрать время разговора</a>
-        <a class="btn" href="${BOT}" target="_blank" rel="noopener">Telegram-бот</a>
-        <a class="btn" href="mailto:hello@edgeivaikin.com">hello@edgeivaikin.com</a>
-        <a class="btn" href="${PHONE_HREF}">${PHONE}</a>
+        <a class="btn opt-extra" href="${BOT}" target="_blank" rel="noopener">Telegram-бот</a>
+        <a class="btn opt-extra" href="mailto:hello@edgeivaikin.com">hello@edgeivaikin.com</a>
+        <a class="btn opt-extra" href="${PHONE_HREF}">${PHONE}</a>
       </div>
       <p class="hero-note">Для корпоративных и государственных партнёров: детальные референсы \u2014 под NDA. Офис: Москва-Сити, башня \u00abФедерация Восток\u00bb, 35 этаж.</p>`,
     },
   },
 };
+
+
+// ---------------------------------------------------------------------------------------------------------------
+// SEO / GEO / CRO layer (v2). Everything below is built from wording that already exists on this site.
+// ---------------------------------------------------------------------------------------------------------------
+// Indexing decision: the funnel pages stay noindex. Flip INDEXABLE to true (and add the 14 URLs to sitemap.xml) only
+// after the 7-day story A/B review; see docs/seo-funnel-v2.md. While false, nothing here asks a crawler to index them.
+const INDEXABLE = false;
+// CRO bundle A/B. '' = random 50/50 per browser. Set 'a' to roll every visitor back to the control without touching CSS.
+const AB_FORCE = '';
+const AB_KEY = 'edge_funnel_ab_cro_v1';
+const OG_IMAGE = { en: ORIGIN + '/assets/og/og-home-en-v2.png', ru: ORIGIN + '/assets/og/og-home-ru-v2.png' };
+const OG_ALT = {
+  en: 'Gold Edge logo. Edge gets stalled digital projects to an accepted result.',
+  ru: 'Золотой логотип Edge. Edge доводит застрявшие цифровые проекты до принятого результата.',
+};
+const ORG_ID = ORIGIN + '/#org';
+
+// Unique <title> and meta description per page. Short, specific, no figures or promises.
+const SEO = {
+  en: {
+    1: ['Scattered data, duplicated work, stalled launch? | Edge', 'CRM, internal portals and integrations for teams held back by disconnected tools and manual work. Start with the problem; no specification needed.'],
+    2: ['Platforms, integrations, delivery: which task is yours? | Edge', 'Scattered customer data, duplicated work across systems, a launch stuck between contractors. Three typical tasks and the service for each.'],
+    3: ['How Edge works: pilot, retainer, productization | Edge', 'Prove value fast, then scale. Start with one business process; scope, budget and acceptance criteria are agreed before development.'],
+    4: ['Delivered projects and cases | Edge Ecosystem', 'Discover Culture (Saudi Arabia, beta launch announced on 23 November 2023) and a public-sector registration and regulatory portal. Roles and outcomes.'],
+    5: ['Pricing anchors and terms | Edge Ecosystem', '"From" anchors for pilot MVP, custom development, IT consulting and support. Final scope and cost are set after discovery.'],
+    6: ['What to bring to the first conversation | Edge Ecosystem', 'Three points are enough: what slows the team down, which systems and people are involved, what result you need and by when.'],
+    7: ['Contact Edge: describe the task in a short message', 'Send three points in Telegram or by email: the bottleneck, the systems and people, the result and the deadline. Or choose a time to talk.'],
+  },
+  ru: {
+    1: ['Данные разрознены, работа дублируется, запуск застрял? | Edge', 'CRM, внутренние порталы и интеграции для команд, у которых разрозненные системы и ручной перенос данных. Начните с проблемы, ТЗ не нужно.'],
+    2: ['Платформы, интеграции, поставка: какая задача ваша? | Edge', 'Разрозненные данные клиентов, дублирование работы в системах, запуск застрял между подрядчиками. Три типичные задачи и услуга под каждую.'],
+    3: ['Как работает Edge: пилот, ретейнер, продуктизация | Edge', 'Быстро доказать ценность, затем масштабировать. Начинаем с одного процесса, объем, бюджет и критерии приемки согласуем до разработки.'],
+    4: ['Что уже сделано: кейсы Edge Ecosystem', 'Discover Culture (Саудовская Аравия, бета-запуск объявлен 23 ноября 2023 года) и регуляторный портал для госсектора. Роли и результаты.'],
+    5: ['Стоимость и условия: ориентиры «от» | Edge Ecosystem', 'Ориентиры «от» для пилотного MVP, заказной разработки, ИТ-консалтинга и поддержки. Итоговая стоимость определяется после discovery.'],
+    6: ['Что подготовить к первому разговору | Edge Ecosystem', 'Достаточно трех пунктов: что тормозит работу, какие системы и люди участвуют, какой результат нужен и к какому сроку.'],
+    7: ['Связаться с Edge: опишите задачу коротким сообщением', 'Отправьте три пункта в Telegram или на почту: что тормозит, какие системы и люди участвуют, какой результат и срок. Или выберите время разговора.'],
+  },
+};
+
+// Quotable answer blocks (GEO). Question as a heading, a direct answer of 2 sentences, only existing claims.
+const ANSWER = {
+  en: {
+    1: ['What does Edge Ecosystem do?', 'Edge Ecosystem builds CRM, internal portals and integrations for teams whose data is scattered, whose work is duplicated across systems, or whose launch is stuck between contractors. A finished technical specification is not needed for the first conversation: start with the problem.'],
+    2: ['Which tasks does Edge take on?', 'Three typical situations map to three services. Scattered customer data calls for platforms and CRM, duplicated work across systems for automation and integrations, and a launch stuck between contractors for reliability and delivery (CI/CD, monitoring, SLA).'],
+    3: ['How does work with Edge start?', 'With one business process. You describe the bottleneck, then scope, dependencies, budget and acceptance criteria for a bounded first stage are agreed before development, and the delivered stage is reviewed against those criteria before the next step is chosen.'],
+    4: ['What has Edge already delivered?', 'A public example is Discover Culture, a cultural events and ticketing platform in Saudi Arabia: on 23 November 2023 the Ministry of Culture announced its beta launch, and Timothy Ivaikin took part as technical lead. A second case covers registration systems and regulatory portals for a public-sector programme, with the client not disclosed.'],
+    6: ['What should the first message include?', 'Three points: what is slowing the team down, which systems and people are involved, and what result is needed by when. A technical specification is not required.'],
+  },
+  ru: {
+    1: ['Чем занимается Edge Ecosystem?', 'Edge Ecosystem создает CRM, внутренние порталы и интеграции для команд, у которых данные разрознены, работа дублируется в разных системах или запуск застрял между подрядчиками. Для первого разговора готовое техническое задание не нужно: начните с проблемы.'],
+    2: ['С какими задачами работает Edge?', 'Три типичные ситуации соответствуют трем услугам. Разрозненные данные клиентов: платформы и CRM, дублирование работы в системах: автоматизация и интеграции, запуск застрял между подрядчиками: надежность и поставка (CI/CD, мониторинг, SLA).'],
+    3: ['Как начинается работа с Edge?', 'С одного бизнес-процесса. Вы описываете, что тормозит работу, затем до разработки согласуются объем, зависимости, бюджет и критерии приемки первого этапа, а результат этапа проверяется по этим критериям, после чего выбирается следующий шаг.'],
+    4: ['Что Edge уже сделал?', 'Публичный пример: платформа культурных мероприятий и билетов Discover Culture в Саудовской Аравии. 23 ноября 2023 года министерство культуры объявило ее бета-запуск, Тимофей Ивайкин участвовал как технический руководитель. Второй кейс: системы регистрации и регуляторные порталы для государственной программы, заказчик не раскрывается.'],
+    6: ['Что написать в первом сообщении?', 'Три пункта: что сейчас тормозит работу, какие системы и люди участвуют, какой результат нужен и к какому сроку. Техническое задание не требуется.'],
+  },
+};
+
+const SERVICES = {
+  en: ['Platforms & CRM', 'Automation & integrations', 'Reliability & delivery'],
+  ru: ['Платформы и CRM', 'Автоматизация и интеграции', 'Надежность и поставка'],
+};
+const SERVICE_NAME = { en: 'CRM, internal portals and integrations', ru: 'CRM, внутренние порталы и интеграции' };
+
+const SHARE = {
+  en: { label: 'Share the checklist', text: 'Checklist for the first conversation about a CRM, portal or integration: what slows the team down, which systems and people are involved, what result is needed and by when.' },
+  ru: { label: 'Переслать чек-лист коллеге', text: 'Чек-лист к первому разговору о CRM, портале или интеграции: что тормозит работу, какие системы и люди участвуют, какой результат нужен и к какому сроку.' },
+};
+const PREFILL = {
+  en: 'Hello! What is slowing the team down: \nSystems and people involved: \nResult needed and by when: ',
+  ru: 'Здравствуйте! Что тормозит работу: \nКакие системы и люди участвуют: \nКакой результат нужен и к какому сроку: ',
+};
+
+const plain = (h) => h.replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/\s+/g, ' ').trim();
+const ldScript = (obj) => `  <script type="application/ld+json">${JSON.stringify(obj).replace(/</g, '\\u003c')}</script>`;
+
+function jsonLd(lang, n, t, c, body, url, seoTitle, seoDesc) {
+  const org = {
+    '@type': 'Organization', '@id': ORG_ID, name: 'Edge Ecosystem', legalName: lang === 'ru' ? 'ООО «ЭДЖ ЭКОСИСТЕМА»' : 'OOO "EDGE ECOSYSTEM"',
+    url: ORIGIN + '/', logo: ORIGIN + '/assets/logo.png', taxID: '9707054215', email: 'hello@edgeivaikin.com', telephone: '+7 995 657-37-30',
+    address: { '@type': 'PostalAddress', addressLocality: lang === 'ru' ? 'Москва' : 'Moscow', addressCountry: 'RU' },
+    sameAs: ['https://www.linkedin.com/in/timothyivaikin/', 'https://t.me/TimothyIvaikin'],
+  };
+  const crumbs = {
+    '@type': 'BreadcrumbList', '@id': url + '#breadcrumb',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Edge Ecosystem', item: ORIGIN + home(lang) },
+      { '@type': 'ListItem', position: 2, name: `${t.stepOf(n)}: ${t.stage[n - 1]}`, item: url },
+    ],
+  };
+  const page = { '@type': 'WebPage', '@id': url + '#webpage', url, name: seoTitle, description: seoDesc, inLanguage: t.htmlLang, isPartOf: { '@id': ORG_ID }, breadcrumb: { '@id': url + '#breadcrumb' }, publisher: { '@id': ORG_ID } };
+  const graph = [org, page, crumbs];
+  if (n === 2 || n === 3) {
+    graph.push({
+      '@type': 'Service', '@id': url + '#service', name: SERVICE_NAME[lang], provider: { '@id': ORG_ID }, serviceType: SERVICES[lang],
+      description: SEO[lang][2][1],
+      hasOfferCatalog: { '@type': 'OfferCatalog', name: SERVICE_NAME[lang], itemListElement: SERVICES[lang].map((name) => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name } })) },
+    });
+  }
+  if (n === 5) {
+    const items = [...body.matchAll(/<summary>(.*?)<\/summary><p>(.*?)<\/p>/g)].map((m) => ({ '@type': 'Question', name: plain(m[1]), acceptedAnswer: { '@type': 'Answer', text: plain(m[2]) } }));
+    if (items.length) graph.push({ '@type': 'FAQPage', '@id': url + '#faq', url, inLanguage: t.htmlLang, mainEntity: items });
+  }
+  return ldScript({ '@context': 'https://schema.org', '@graph': graph });
+}
+
+const AB_SCRIPT = `  <script>(function(){var v="${AB_FORCE}";try{if(!v){v=localStorage.getItem("${AB_KEY}");if(v!=="a"&&v!=="b"){v=Math.random()<.5?"a":"b";localStorage.setItem("${AB_KEY}",v)}}}catch(e){}v=v==="b"?"b":"a";window.edgeFunnelAB=v;if(v==="b")document.documentElement.className+=" fab-b"})()</script>`;
 
 const HEAD_SCRIPTS = `  <script>window.edgeFunnelEntry="funnel_page";</script>
   <!-- Google Tag Manager (deferred) -->
@@ -303,7 +410,7 @@ function render(lang, n) {
   const url = ORIGIN + base(lang, n);
   const other = lang === 'ru' ? 'en' : 'ru';
   const nextLabel = n < 7 ? t.stage[n] : '';
-  const body = c.body.replace(/href="MAILTO"/g, `href="${esc(MAIL[lang]).replace(/&amp;amp;/g, '&amp;')}"`);
+  const body = c.body.replace(/data-prefill="PREFILL"/g, `data-prefill="${esc(PREFILL[lang])}"`).replace(/href="MAILTO"/g, `href="${esc(MAIL[lang]).replace(/&amp;amp;/g, '&amp;')}"`);
   const steps = t.stage.map((label, i) => {
     const k = i + 1;
     return `<a href="${base(lang, k)}"${k === n ? ' aria-current="step"' : ''}><span class="n">${k}</span><span class="l">${esc(label)}</span></a>`;
@@ -313,7 +420,16 @@ function render(lang, n) {
         <a class="btn" href="${base(lang, 7)}" data-ladder-contact>${esc(t.discuss)}</a>`
     : `<a class="btn" href="${home(lang)}">${esc(t.siteLink)}</a>`;
   const tg = n < 7 ? `<p class="hero-note">${esc(t.tgLine)} <a href="${TELEGRAM}" target="_blank" rel="noopener">${esc(t.tgLink)}</a></p>` : '';
-  const desc = c.lead;
+  const [seoTitle, seoDesc] = SEO[lang][n];
+  const ans = ANSWER[lang][n];
+  const answerBlock = ans ? `
+  <section class="section answer-section"><div class="container"><div class="answer" data-answer><h2>${esc(ans[0])}</h2><p>${esc(ans[1])}</p></div></div></section>` : '';
+  const shareUrl = `${url}?utm_source=telegram&utm_medium=share&utm_campaign=ladder&utm_content=share_s${n}`;
+  const shareBlock = n === 6 ? `<p class="share"><a class="btn" href="https://t.me/share/url?url=${encodeURIComponent(shareUrl)}&amp;text=${encodeURIComponent(SHARE[lang].text)}" target="_blank" rel="noopener">${esc(SHARE[lang].label)}</a></p>` : '';
+  const heroCta = n < 7 ? `<p class="hero-cta"><a class="btn primary" href="${base(lang, 7)}" data-ladder-contact>${esc(t.discuss)}</a></p>` : '';
+  const stickyCta = n < 7
+    ? `<div class="sticky-cta" data-sticky-cta><a class="btn primary" href="${base(lang, 7)}" data-ladder-contact>${esc(t.discuss)}</a></div>`
+    : `<div class="sticky-cta" data-sticky-cta><a class="btn primary" href="${TELEGRAM}" target="_blank" rel="noopener" data-prefill="${esc(PREFILL[lang])}">${esc(t.tgLink)}</a></div>`;
   return `<!doctype html>
 <html lang="${t.htmlLang}" dir="ltr">
 <head>
@@ -323,9 +439,24 @@ function render(lang, n) {
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
-  <title>${esc(c.title)} | Edge Ecosystem</title>
-  <meta name="description" content="${esc(desc)}"/>
-  <meta name="robots" content="noindex">
+  <title>${esc(seoTitle)}</title>
+  <meta name="description" content="${esc(seoDesc)}"/>
+  <meta name="robots" content="${INDEXABLE ? 'index,follow' : 'noindex'}">
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="Edge Ecosystem"/>
+  <meta property="og:locale" content="${t.locale}"/>
+  <meta property="og:title" content="${esc(seoTitle)}"/>
+  <meta property="og:description" content="${esc(seoDesc)}"/>
+  <meta property="og:url" content="${url}"/>
+  <meta property="og:image" content="${OG_IMAGE[lang]}"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta property="og:image:alt" content="${esc(OG_ALT[lang])}"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="${esc(seoTitle)}"/>
+  <meta name="twitter:description" content="${esc(seoDesc)}"/>
+  <meta name="twitter:image" content="${OG_IMAGE[lang]}"/>
+  <meta name="twitter:image:alt" content="${esc(OG_ALT[lang])}"/>
   <meta name="theme-color" content="#05060a"/>
   <link rel="canonical" href="${url}"/>
   <link rel="alternate" hreflang="${other}" href="${ORIGIN + base(other, n)}"/>
@@ -333,6 +464,8 @@ function render(lang, n) {
   <link rel="stylesheet" href="/assets/styles.css"/>
   <link rel="stylesheet" href="/assets/landing.css"/>
   <link rel="stylesheet" href="/assets/funnel.css"/>
+${AB_SCRIPT}
+${jsonLd(lang, n, t, c, body, url, seoTitle, seoDesc)}
 ${HEAD_SCRIPTS}
 </head>
 <body class="bg-grid landing funnel" data-funnel-step="${n}">
@@ -356,9 +489,11 @@ ${HEAD_SCRIPTS}
       <p class="hero-eyebrow">${esc(t.stepOf(n))} \u00b7 ${esc(t.stage[n - 1])}</p>
       <h1>${esc(c.title)}</h1>
       <p class="lead">${esc(c.lead)}</p>
+      ${heroCta}
       ${n === 7 ? '' : body}
+      ${shareBlock}
     </div>
-  </section>
+  </section>${answerBlock}
 ${n === 7 ? `  <section class="section" id="contact">
     <div class="container">
       ${body}
@@ -373,6 +508,7 @@ ${n === 7 ? `  <section class="section" id="contact">
     </div>
   </section>
 </main>
+${stickyCta}
 
 <footer class="footer">
   <div class="container">
