@@ -114,6 +114,7 @@ If you add anything that could slow down:
 - `deck/index.html` — HTML capabilities deck
 - `assets/styles.css` — global styles (high-tech theme)
 - `assets/app.js` — minimal JS (smooth scroll + deck keys)
+- `assets/goals.js`, `docs/analytics-goals.md` — Metrika contact goals and their ids
 - `sitemap.xml` — sitemap (replace `YOURDOMAIN`)
 - `robots.txt` — robots + sitemap pointer
 
