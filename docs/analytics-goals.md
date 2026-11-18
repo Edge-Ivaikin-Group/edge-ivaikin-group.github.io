@@ -27,3 +27,8 @@ Rollback: `git revert <commit>` of the single E1 commit; GitHub Pages updates in
 A = current button to `#contact`. B = "Book a 20-minute call" / "Выбрать время для 20-минутного разговора" straight to the calendar link (B clicks also fire `cta_calendar`).
 Metrika: visit parameter `ab_hero` = `A` or `B` (`forced_A` / `forced_B` while the flag is set), and goal `hero_cta` (JavaScript event, create it in Metrika) with the same parameter on a click of the first-screen primary button.
 Rollback to A for everyone: in `assets/ab-hero.js` set `var FORCE = "A";` (or revert the E2 commit).
+
+## E3: channel note (`/` and `/ru/`)
+
+A small note in the contact section links to the Telegram channel. The link constant is `CHANNEL_URL` in `assets/channel.js` (the HTML carries the same URL as a no-JS fallback). A click fires `cta_channel`.
+To switch to a per-site invite link, change `CHANNEL_URL` and the two `href` fallbacks. Rollback: revert the E3 commit.
