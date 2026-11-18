@@ -56,6 +56,8 @@
     hero.setAttribute("rel", "noopener");
   }
 
+  // Read by assets/ladder.js (funnel events carry the variant).
+  window.edgeAbHero = forced ? "forced_" + variant : variant;
   ym("params", { ab_hero: forced ? "forced_" + variant : variant });
   hero.addEventListener("click", function () {
     ym("reachGoal", "hero_cta", { ab_hero: forced ? "forced_" + variant : variant });
