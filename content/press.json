@@ -31,18 +31,15 @@
       "downloads": "Company background",
       "home": "Home",
       "company": "Timothy Ivaikin’s press room",
-      "archiveNote": "Events, writing and recognition of Edge Ecosystem founder Timothy Ivaikin.",
+      "archiveNote": "Events and writing of Edge Ecosystem founder Timothy Ivaikin.",
       "news": [
-        "Corporate Culture intensive in Moscow",
-        "Recognition from the Nasledie Mira publishing house"
+        "Corporate Culture intensive in Moscow"
       ],
       "newsDeck": [
-        "Participation on 13 November 2026; the organisers introduced Ivaikin as a panel speaker.",
-        "Original diploma and letter of appreciation, with dated context."
+        "Participation on 13 November 2026; the organisers introduced Ivaikin as a panel speaker."
       ],
       "newsDate": [
-        "Event: 13 Nov 2026 · Release: 14 Nov 2026",
-        "Documents: 7 Oct 2026 · Published: 13 Nov 2026"
+        "Event: 13 Nov 2026 · Release: 14 Nov 2026"
       ],
       "more": "Read the material",
       "related": "Services and portfolio",
@@ -77,18 +74,15 @@
       "downloads": "Справка о компании",
       "home": "Главная",
       "company": "Раздел для СМИ Тимофея Ивайкина",
-      "archiveNote": "События, публикации и признание основателя Edge Ecosystem Тимофея Ивайкина.",
+      "archiveNote": "События и публикации основателя Edge Ecosystem Тимофея Ивайкина.",
       "news": [
-        "Участие в интенсиве о корпоративной культуре в Москве",
-        "Признание от издательского дома «Наследие мира»"
+        "Участие в интенсиве о корпоративной культуре в Москве"
       ],
       "newsDeck": [
-        "Событие 13 ноября 2026 года; организаторы представили Ивайкина как спикера панели.",
-        "Оригиналы диплома и благодарности с датированным контекстом."
+        "Событие 13 ноября 2026 года; организаторы представили Ивайкина как спикера панели."
       ],
       "newsDate": [
-        "Событие: 13.11.2026 · Релиз: 14.11.2026",
-        "Документы: 07.10.2026 · Публикация: 13.11.2026"
+        "Событие: 13.11.2026 · Релиз: 14.11.2026"
       ],
       "more": "Читать материал",
       "related": "Услуги и портфолио",
@@ -123,18 +117,15 @@
       "downloads": "公司简介",
       "home": "首页",
       "company": "Timothy Ivaikin 媒体资料 · 英文",
-      "archiveNote": "Edge Ecosystem 创始人 Timothy Ivaikin 的活动、作品与个人表彰。完整材料提供英文和俄文版本。",
+      "archiveNote": "Edge Ecosystem 创始人 Timothy Ivaikin 的活动与作品。完整材料提供英文和俄文版本。",
       "news": [
-        "参加莫斯科企业文化活动 · 英文",
-        "获 Nasledie Mira 出版机构表彰 · 英文"
+        "参加莫斯科企业文化活动 · 英文"
       ],
       "newsDeck": [
-        "活动日期为 2026 年 11 月 13 日。",
-        "证书及感谢信原件。"
+        "活动日期为 2026 年 11 月 13 日。"
       ],
       "newsDate": [
-        "活动：2026.11.13 · 发布：2026.11.14",
-        "文件：2026.10.07 · 发布：2026.11.13"
+        "活动：2026.11.13 · 发布：2026.11.14"
       ],
       "more": "阅读资料",
       "related": "服务与项目",
@@ -165,18 +156,15 @@
       "downloads": "تحميل نبذة الشركة",
       "home": "الرئيسية",
       "company": "المواد الإعلامية لـ Timothy Ivaikin · بالإنجليزية",
-      "archiveNote": "فعاليات المؤسس Timothy Ivaikin وكتاباته وتكريمه الشخصي. المواد الكاملة بالإنجليزية والروسية.",
+      "archiveNote": "فعاليات المؤسس Timothy Ivaikin وكتاباته. المواد الكاملة بالإنجليزية والروسية.",
       "news": [
-        "مشاركة المؤسس في لقاء عن ثقافة الشركة · بالإنجليزية",
-        "تكريم من دار نشر Nasledie Mira · بالإنجليزية"
+        "مشاركة المؤسس في لقاء عن ثقافة الشركة · بالإنجليزية"
       ],
       "newsDeck": [
-        "أقيم اللقاء في 13 نوفمبر 2026.",
-        "صور أصلية للشهادة ورسالة الشكر."
+        "أقيم اللقاء في 13 نوفمبر 2026."
       ],
       "newsDate": [
-        "اللقاء: 13.11.2026 · النشر: 14.11.2026",
-        "الوثائق: 07.10.2026 · النشر: 13.11.2026"
+        "اللقاء: 13.11.2026 · النشر: 14.11.2026"
       ],
       "more": "قراءة المادة",
       "related": "الخدمات والمشاريع",
@@ -191,12 +179,10 @@
   ],
   "logo": "/assets/brand/edge-logo-gold-header.svg",
   "archiveURLs": [
-    "https://ivaikin.com/press/corporate-culture-2026-11-13/",
-    "https://ivaikin.com/en/recognition/nasledie-mira-2026/"
+    "https://ivaikin.com/press/corporate-culture-2026-11-13/"
   ],
   "archiveURLsRU": [
-    "https://ivaikin.com/ru/press/corporate-culture-2026-11-13/",
-    "https://ivaikin.com/ru/recognition/nasledie-mira-2026/"
+    "https://ivaikin.com/ru/press/corporate-culture-2026-11-13/"
   ],
   "downloadPrefix": "company-background",
   "articles": {}
