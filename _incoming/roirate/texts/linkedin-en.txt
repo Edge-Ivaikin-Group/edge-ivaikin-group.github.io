@@ -1,0 +1,16 @@
+Where should a limited budget go when demand becomes less predictable?
+
+On November 13 I attended Roirate's Anti-Crisis 2026 conference at the Stratos business centre in Skolkovo. Founders, executives and product teams discussed demand validation, budget allocation and decision-making under uncertainty. I also took part in the hands-on systems simulation.
+
+Five checks I use before investing in a product:
+1. Is demand confirmed? If repeat purchases dropped, ask customers why before building more.
+2. What is the nearest result a customer will accept as a whole?
+3. What does the full path to real use cost, including integrations, data and training?
+4. Who owns verification when AI and automation speed up the work?
+5. Which 1-2 money-linked metrics will tell you in a month that the decision was right?
+
+People, processes and tools work as one system. Change one part and the load shifts to the others.
+
+Thanks to the ROIRATE team and Nikita Balashov for the event. Photo: Roirate
+
+#ProductManagement #Leadership #AI #Strategy
