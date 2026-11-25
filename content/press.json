@@ -33,12 +33,15 @@
       "company": "Timothy Ivaikin’s press room",
       "archiveNote": "Events and writing of Edge Ecosystem founder Timothy Ivaikin.",
       "news": [
+        "Edge Ecosystem founder at Roirate's Anti-Crisis 2026 conference",
         "Corporate Culture intensive in Moscow"
       ],
       "newsDeck": [
+        "13 November 2026, Stratos business centre, Skolkovo. Topics: demand validation, budget allocation, decisions under uncertainty, people, systems and AI.",
         "Participation on 13 November 2026; the organisers introduced Ivaikin as a panel speaker."
       ],
       "newsDate": [
+        "Event: 13 Nov 2026 · Published: 27 Nov 2026",
         "Event: 13 Nov 2026 · Release: 14 Nov 2026"
       ],
       "more": "Read the material",
@@ -76,12 +79,15 @@
       "company": "Раздел для СМИ Тимофея Ивайкина",
       "archiveNote": "События и публикации основателя Edge Ecosystem Тимофея Ивайкина.",
       "news": [
+        "Основатель Edge Ecosystem на конференции Roirate «Антикризис 2026»",
         "Участие в интенсиве о корпоративной культуре в Москве"
       ],
       "newsDeck": [
+        "13 ноября 2026 года, БЦ «Стратос», Сколково. Темы: проверка спроса, распределение бюджета, решения при неопределенности, люди, системы и ИИ.",
         "Событие 13 ноября 2026 года; организаторы представили Ивайкина как спикера панели."
       ],
       "newsDate": [
+        "Событие: 13.11.2026 · Публикация: 27.11.2026",
         "Событие: 13.11.2026 · Релиз: 14.11.2026"
       ],
       "more": "Читать материал",
@@ -132,7 +138,10 @@
       "bioEN": "英文简介 · TXT",
       "bioRU": "俄文简介 · TXT",
       "updated": "更新于 2026 年 11 月 14 日",
-      "brand": "官方品牌资料"
+      "brand": "官方品牌资料",
+      "archiveURLs": [
+        "https://ivaikin.com/press/corporate-culture-2026-11-13/"
+      ]
     },
     "ar": {
       "name": "العربية",
@@ -171,7 +180,10 @@
       "bioEN": "نبذة بالإنجليزية · TXT",
       "bioRU": "نبذة بالروسية · TXT",
       "updated": "آخر تحديث: 14 نوفمبر 2026",
-      "brand": "مواد الهوية الرسمية"
+      "brand": "مواد الهوية الرسمية",
+      "archiveURLs": [
+        "https://ivaikin.com/press/corporate-culture-2026-11-13/"
+      ]
     }
   },
   "styles": [
@@ -179,9 +191,11 @@
   ],
   "logo": "/assets/brand/edge-logo-gold-header.svg",
   "archiveURLs": [
+    "https://ivaikin.com/press/roirate-antikrizis-2026-11-13/",
     "https://ivaikin.com/press/corporate-culture-2026-11-13/"
   ],
   "archiveURLsRU": [
+    "https://ivaikin.com/ru/press/roirate-antikrizis-2026-11-13/",
     "https://ivaikin.com/ru/press/corporate-culture-2026-11-13/"
   ],
   "downloadPrefix": "company-background",
