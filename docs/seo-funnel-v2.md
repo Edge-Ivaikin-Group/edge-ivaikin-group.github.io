@@ -60,3 +60,7 @@ The bundle is tested as one unit because traffic is small: separate tests of eac
 1. Set `INDEXABLE = true` in scripts/build-funnel.mjs, rebuild.
 2. Add the chosen URLs to sitemap.xml; for the others set noindex per page.
 3. Update tests: `seo-v2.test.mjs` expects noindex everywhere.
+
+## Decision 19.11.2026 (executed 26.11.2026)
+
+Timothy approved: steps 1 and 4 (EN and RU) are indexable (index,follow, self canonical) and listed in sitemap.xml. Steps 2, 3, 5, 6, 7 stay noindex. Constant INDEX_STEPS in scripts/build-funnel.mjs. Revert: set INDEX_STEPS = [] and rebuild, remove the 4 sitemap entries.

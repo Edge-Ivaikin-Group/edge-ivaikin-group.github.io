@@ -81,7 +81,7 @@ test('funnel pages: 7 steps in EN and RU, noindex, canonical, scripts, chain of 
     for (const n of STEPS) {
       const html = await read(pagePath(lang, n));
       const url = lang === 'ru' ? `/ru/ladder/${n}/` : `/ladder/${n}/`;
-      assert.match(html, /<meta name="robots" content="noindex">/, url);
+      assert.match(html, [1, 4].includes(n) ? /<meta name="robots" content="index,follow">/ : /<meta name="robots" content="noindex">/, url);
       assert.ok(html.includes(`<link rel="canonical" href="https://edgeivaikin.com${url}"/>`), url);
       assert.ok(html.includes(`data-funnel-step="${n}"`), url);
       assert.ok(html.includes('window.edgeFunnelEntry="funnel_page"'), url);
@@ -102,7 +102,7 @@ test('funnel pages: 7 steps in EN and RU, noindex, canonical, scripts, chain of 
 });
 
 test('funnel pages are not in the sitemap, robots.txt or the main navigation of existing pages', async () => {
-  assert.ok(!(await read('sitemap.xml')).includes('/ladder/'));
+  const sm = await read('sitemap.xml'); for (const n of STEPS) for (const u of [`/ladder/${n}/`, `/ru/ladder/${n}/`]) assert.equal(sm.includes('<loc>https://edgeivaikin.com' + u + '</loc>'), [1, 4].includes(n), u);
   assert.ok(!(await read('robots.txt')).includes('ladder'));
   for (const f of ['index.html', 'ru/index.html', 'zh/index.html', 'ar/index.html', 'ru/anticrisis/index.html', 'ru/automation-ai/index.html']) {
     assert.ok(!(await read(f)).includes('/ladder/'), f);

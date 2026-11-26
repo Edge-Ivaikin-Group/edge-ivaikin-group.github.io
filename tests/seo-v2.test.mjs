@@ -15,7 +15,7 @@ test('seo v2: stays noindex, unique title and description, OG and Twitter cards 
   const titles = new Set(); const descs = new Set();
   for (const { lang, n, html } of all()) {
     const id = `${lang}/${n}`;
-    assert.match(html, /<meta name="robots" content="noindex">/, id);
+    assert.match(html, [1, 4].includes(n) ? /<meta name="robots" content="index,follow">/ : /<meta name="robots" content="noindex">/, id);
     const title = html.match(/<title>(.*?)<\/title>/)[1];
     const desc = html.match(/<meta name="description" content="(.*?)"\/>/)[1];
     assert.ok(title.length >= 20 && title.length <= 70, `${id} title ${title.length}`);

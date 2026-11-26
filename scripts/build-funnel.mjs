@@ -284,6 +284,8 @@ const C = {
 // Indexing decision: the funnel pages stay noindex. Flip INDEXABLE to true (and add the 14 URLs to sitemap.xml) only
 // after the 7-day story A/B review; see docs/seo-funnel-v2.md. While false, nothing here asks a crawler to index them.
 const INDEXABLE = false;
+// Approved 19.11.2026 (EF #30896): after the 7-day review only steps 1 and 4 are indexable; the rest stay noindex.
+const INDEX_STEPS = [1, 4];
 // CRO bundle A/B. '' = random 50/50 per browser. Set 'a' to roll every visitor back to the control without touching CSS.
 const AB_FORCE = '';
 const AB_KEY = 'edge_funnel_ab_cro_v1';
@@ -441,7 +443,7 @@ function render(lang, n) {
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
   <title>${esc(seoTitle)}</title>
   <meta name="description" content="${esc(seoDesc)}"/>
-  <meta name="robots" content="${INDEXABLE ? 'index,follow' : 'noindex'}">
+  <meta name="robots" content="${INDEXABLE || INDEX_STEPS.includes(n) ? 'index,follow' : 'noindex'}">
   <meta property="og:type" content="website"/>
   <meta property="og:site_name" content="Edge Ecosystem"/>
   <meta property="og:locale" content="${t.locale}"/>
