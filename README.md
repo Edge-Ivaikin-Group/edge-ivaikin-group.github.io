@@ -128,7 +128,7 @@ For a trusted staging build, inject `data-endpoint` on `#partner-form` with the 
 
 ## Press rooms
 
-Run `node scripts/build-press.mjs` after changing `content/press.json`. `/press/`, `/ru/press/`, `/zh/press/` and `/ar/press/` provide public company background, media contact, links to existing approved brand assets and clearly attributed founder materials. English/Russian downloadable background notes reuse current public service descriptions. Founder attendance and personal recognition are not company awards or partnerships; full releases retain their canonical personal-site URLs. New copy is editorial navigation and concise background, with no new legal-history, client or financial claim. Existing services, portfolio and brand guide remain in force. No private review files or strategy links are published.
+Run `node scripts/build-press.mjs` after changing `content/press.json`. On-site releases, when present, are generated per slug from `articles` (`eventDate`, `publishedDate`, per-language labels, and locale paragraph arrays). `/press/`, `/ru/press/`, `/zh/press/` and `/ar/press/` provide public company background, media contact, links to existing approved brand assets and clearly attributed founder materials. English/Russian downloadable background notes reuse current public service descriptions. Founder attendance and personal recognition are not company awards or partnerships; full releases retain their canonical personal-site URLs. New copy is editorial navigation and concise background, with no new legal-history, client or financial claim. Existing services, portfolio and brand guide remain in force. No private review files or strategy links are published.
 
 ## Project portfolio
 
